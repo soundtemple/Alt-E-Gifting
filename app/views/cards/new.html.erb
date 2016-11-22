@@ -1,2 +1,75 @@
 <h1>NEW CARD</h1>
 <p>Find me in app/views/cards/new.html.erb</p>
+
+<!-- <div class="box">
+  Particular fields here
+  <button class="back">Back</button>
+  <button class="next">Next</button>
+</div> -->
+
+<div class="box-wrapper">
+  <div class="box initial">
+    <!-- Particular fields here -->
+    <label for="title">Title</label>
+    <select class="title" name="title">
+      <% @titles.each do |title| %>
+      <option value="<%= title.id %>"> <%= title.name %></option>
+      <% end %>
+    </select>
+
+    <label for="name">Name</label>
+    <input name="name">
+
+    <label for="email">Email</label>
+    <input name="email">
+
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Particular fields here -->
+    <label for="category">Category</label>
+    <select class="category" name="category">
+      <% @favours.each do |favour| %>
+      <option value="<%= favour.category %>"> <%= favour.category %></option>
+      <% end %>
+    </select>
+
+    <label for="favour-choice">Favour</label>
+    <select class="favour-choice" name="favour-choice">
+      <% @favours.each do |favour| %>
+      <option value="<%= favour.id %>"> <%= favour.message %> </option>
+      <% end %>
+    </select>
+    <input name="favour-input">
+
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Particular fields here -->
+    <label for="background_colour">Background Colour</label>
+    <select class="background_colour" name="background_colour">
+      <% @background_colours.each do |colour| %>
+      <option value="<%= colour %>"> <%= colour %> </option>
+      <% end %>
+    </select>
+
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Particular fields here -->
+    <label for="background_image">Background Image</label>
+    <select class="background_colour" name="background_image">
+      <% @background_images.each do |image| %>
+      <option value="<%= image %>"> <%= image %> </option>
+      <% end %>
+    </select>
+
+    <button class="prev">Back</button>
+    <button class="submit">Submit</button>
+  </div>
+</div>
