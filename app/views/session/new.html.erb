@@ -1,0 +1,58 @@
+<h2>Account</h2>
+
+<div class="wrapper">
+
+  <div class="left_box">
+    <% if logged_in? %>
+
+    <%= form_tag '/logout', method: 'post' do %>
+      <input type="hidden" name="_method" value="delete">
+      <button>Logout</button>
+    <% end %>
+
+    <% else %>
+      <h3>Login</h3>
+      <%= form_tag '/session', method: 'post' do %>
+
+        <input type="input" placeholder="email"name="email" value="">
+
+        <input type="password" placeholder="password" name="password" value="">
+        <button>LOGIN</button>
+      <% end %>
+    <% end %>
+
+
+
+    <div class="info">
+      <!--  return message from account creation-->
+      <% if @errors %>
+        <% @errors.each do |key, value| %>
+          <p class="message" id="<%= @type %>">
+          <%= key.to_s.upcase + " " + value.to_s %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="right_box">
+    <% if logged_in? %>
+
+    <% else %>
+      <%= form_tag '/session/new_user', method: 'post' do %>
+        <h3>Sign Up</h3>
+        <input type="input" placeholder="email" name="email" value="">
+
+        <input type="password" placeholder="password" name="password" value="">
+
+        <input type="password" placeholder="confirm password" name="password_confirmation" value="">
+
+        <button>SIGN UP</button>
+
+      <% end %>
+    <% end %>
+
+  </div>
+
+
+
+</div>
