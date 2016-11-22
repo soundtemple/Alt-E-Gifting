@@ -36,6 +36,7 @@
 
   <div class="right_box">
     <% if logged_in? %>
+    <p>Logged in as <%= current_user.email %></p>
 
     <% else %>
       <%= form_tag '/session/new_user', method: 'post' do %>
