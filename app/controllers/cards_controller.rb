@@ -4,6 +4,12 @@ class CardsController < ApplicationController
   end
 
   def new
+    @favours = Favour.all
+    @titles = Title.all
+
+    @background_colours = ['teal','mistyrose','black', 'red']
+
+    @background_images = ['puppy', 'kitten', 'ostrich', 'parrot']
   end
 
   def create
