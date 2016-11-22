@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Alte</title>
+    <title>Alt-E</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,19 @@
   </head>
 
   <body>
+    <nav>
+      <ul class="nav">
+        <li><a href="#">+send a favour</a></li>
+        <li><a href="#">Pay It Forward?</a></li>
+        <li><a href="#">login</a></li>
+      </ul>
+    </nav>
+
     <%= yield %>
+
+    <footer>
+        <p>Alt-E and Co.</p>
+        <p>Pay It Forward</p>
+    </footer>
   </body>
 </html>
