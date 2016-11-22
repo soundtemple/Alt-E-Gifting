@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+
+
+img:hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+}
+
+.carousel {
+  display: inline-block;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.selected-image {
+  width: 640px;
+  height: 480px;
+  border: 1px solid grey;
+  background-size: cover;
+  margin: 0 auto;
+}
+.image-results {
+  height: 150px;
+  width: 80%;
+  overflow-y: scroll;
+  border: 1px solid grey;
+  margin: 0 auto;
+}
+
+.selected-image:hover {
+  cursor: pointer;
+}
