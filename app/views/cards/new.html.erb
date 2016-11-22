@@ -30,8 +30,8 @@
     <!-- Particular fields here -->
     <label for="category">Category</label>
     <select class="category" name="category">
-      <% @favours.each do |favour| %>
-      <option value="<%= favour.category %>"> <%= favour.category %></option>
+      <% @categories.each do |category| %>
+      <option value="<%= category %>"> <%= category %></option>
       <% end %>
     </select>
 
