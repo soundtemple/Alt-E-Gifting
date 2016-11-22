@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'cards/new'
+
+  get 'cards/edit'
+
+  get 'cards/delete'
+
   get 'session/new'
 
   get 'session/create'
