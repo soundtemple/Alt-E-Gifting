@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121234222) do
+ActiveRecord::Schema.define(version: 20161122012407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "recipient_email"
+    t.text     "recipient_name"
+    t.text     "title"
+    t.text     "message"
+    t.text     "background_img"
+    t.text     "background_col"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
+  end
+
+  create_table "favours", force: :cascade do |t|
+    t.text     "category"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -22,4 +42,5 @@ ActiveRecord::Schema.define(version: 20161121234222) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "cards", "users"
 end

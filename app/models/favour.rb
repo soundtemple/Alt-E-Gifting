@@ -1,0 +1,2 @@
+class Favour < ApplicationRecord
+end
