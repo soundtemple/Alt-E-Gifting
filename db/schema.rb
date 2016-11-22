@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122012407) do
+ActiveRecord::Schema.define(version: 20161122033242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,18 +19,25 @@ ActiveRecord::Schema.define(version: 20161122012407) do
     t.integer  "user_id"
     t.text     "recipient_email"
     t.text     "recipient_name"
-    t.text     "title"
     t.text     "message"
     t.text     "background_img"
     t.text     "background_col"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "title_id"
+    t.index ["title_id"], name: "index_cards_on_title_id", using: :btree
     t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
   end
 
   create_table "favours", force: :cascade do |t|
     t.text     "category"
     t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.text     "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,5 +49,6 @@ ActiveRecord::Schema.define(version: 20161122012407) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "cards", "titles"
   add_foreign_key "cards", "users"
 end
