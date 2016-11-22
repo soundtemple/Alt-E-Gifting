@@ -7,9 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Favour.destroy_all
+User.destroy_all
 
-u = User.create(email: 'dt@ga.co', password: 'pudding')
-u.reload
+u1 = User.create(email: 'ej@ga.co', password: 'admin')
+u1.reload
+u2 = User.create(email: 'tim@ga.co', password: 'admin')
+u2.reload
+u3 = User.create(email: 'zutaar@ga.co', password: 'admin')
+u3.reload
+u4 = User.create(email: 'ari@ga.co', password: 'admin')
+u4.reload
 
 romance = ['I will cook you dinner','I will give you a full body massage', 'I will give you a personal training session',
   'I will take you on a double-date', 'I will shave your back', 'I will watch your favourite movie',
