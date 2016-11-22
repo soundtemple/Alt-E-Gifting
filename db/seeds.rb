@@ -35,7 +35,7 @@ skills.each do |num|
 end
 
 chores = ['I will help organise a room', 'I will clean the house', 'I will do the gardening',
-  'I will do the yard work', 'I will run errands', 'I will preform some repair work',
+  'I will do the yard work', 'I will run errands', 'I will perform some repair work',
   'I will do the sewing', 'I will cater a party', 'I will house sit', 'I will give you interior design help',
   'I will landscape the yard', 'I will make the bed', 'I will wash the dishes' ]
 
