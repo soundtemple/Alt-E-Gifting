@@ -71,7 +71,7 @@
               <button>EDIT</button>
             </form>
             <form action="/cards/<%= card.id %>" method="post">
-              <input type="hidden" name="_method" value="destroy">
+              <input type="hidden" name="_method" value="delete">
               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
               <button>DELETE</button>
             </form>
