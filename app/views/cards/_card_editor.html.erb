@@ -61,7 +61,7 @@
 
     <!-- SELECTED IMAGE  -->
     <div class="container">
-        <div class="chosen-image input_img"><img src=""/></div>
+        <div class="chosen-image"><img class="input_img" src=""/></div>
     </div>
 
     <!-- CAROUSEL -->
@@ -83,9 +83,9 @@
           <div class="card-text">
             <div class="recipient_name preview_rn"><%= @card.recipient_name %></div>
             <div class="card-title preview_t"><%= (Title.find(@card.title_id)).name %></div>
-            <div class="card-message preview_msg"><%= @card.message %></div>
           </div>
         </div>
+        <div class="card-message preview_msg"><%= @card.message %></div>
       </div>
       <div class="sign_off"><%= @card.sign_off %></div>
 
