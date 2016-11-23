@@ -14,7 +14,7 @@ class CardsController < ApplicationController
     @card.recipient_name = ""
     @card.title_id = 2
     @card.sign_off = ""
-    @card.message = Favour.first
+    @card.message = Favour.first.message
     @card.background_img = ""
     @card.background_col = "#46c1c2"
 
@@ -22,7 +22,7 @@ class CardsController < ApplicationController
 
   def create
     card = Card.new
-    card.user_id = current_user
+    card.user_id = current_user.id
     card.recipient_email = params[:recipient_email]
     card.recipient_name = params[:recipient_name]
     card.title_id = params[:title].to_i
@@ -30,6 +30,7 @@ class CardsController < ApplicationController
     card.message = params[:message]
     card.background_img = params[:background_img]
     card.background_col = params[:background_col]
+
 
     if card.save
       if params[:action].include?("Send")
