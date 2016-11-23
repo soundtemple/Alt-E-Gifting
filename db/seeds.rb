@@ -8,6 +8,8 @@
 
 Favour.destroy_all
 User.destroy_all
+Card.destroy_all
+Title.destroy_all
 
 u1 = User.create(email: 'ej@ga.co', password: 'admin')
 u1.reload
@@ -17,6 +19,7 @@ u3 = User.create(email: 'zutaar@ga.co', password: 'admin')
 u3.reload
 u4 = User.create(email: 'ari@ga.co', password: 'admin')
 u4.reload
+
 
 romance = ['I will cook you dinner','I will give you a full body massage', 'I will give you a personal training session',
   'I will take you on a double-date', 'I will shave your back', 'I will watch your favourite movie',
@@ -55,4 +58,17 @@ job = ['I will give you help with your resume', 'I will give you career advice',
 
 job.each do |num|
  Favour.create(category: 'career', message: "#{num}")
+end
+
+text = ['Just Becasue']
+
+text.each do |num|
+  Title.create(name: "#{num}")
+end
+
+users = [u1,u2,u3,u4]
+
+users.each do |user|
+  Card.create(user_id: user.id, recipient_email: 'dt@ga.co', recipient_name: 'DT', title_id: Title.first.id, message: 'I will give you career advice',
+   background_img: 'http://appointmentsbilanguage.co.uk/wp-content/uploads/2015/07/Career-Advice.jpg', background_col: '#933a4c' )
 end
