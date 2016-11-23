@@ -1,3 +1,50 @@
 // Place all the styles related to the cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.background_col {
+  border: 1px solid grey;
+  width:700px;
+  max-width:700px;
+  height: 500px;
+  max-height:500px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.background_img {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-text {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-title {
+  font-size: 5em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 5px 5px black;
+}
+
+.card-message {
+  font-size: 2em;
+  text-shadow: 1px 1px black;
+}

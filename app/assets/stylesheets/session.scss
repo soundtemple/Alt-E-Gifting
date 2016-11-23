@@ -1,3 +1,43 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.saved-cards-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.saved-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.saved-card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-headings {
+  margin-bottom: 0;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
