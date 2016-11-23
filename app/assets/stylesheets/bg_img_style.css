@@ -2,8 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-
-
 img:hover {
   cursor: pointer;
 }
@@ -12,27 +10,64 @@ img:hover {
   width: 80%;
 }
 
-.carousel {
-  display: inline-block;
-  max-width: 150px;
-  max-height: 150px;
-}
-
-.selected-image {
+.chosen-image {
   width: 640px;
   height: 480px;
-  border: 1px solid grey;
   background-size: cover;
   margin: 0 auto;
-}
-.image-results {
-  height: 150px;
-  width: 80%;
-  overflow-y: scroll;
-  border: 1px solid grey;
-  margin: 0 auto;
+  background-color: white;
+  padding:20px;
+  padding-bottom: 100px;
 }
 
-.selected-image:hover {
+.chosen-image:hover {
   cursor: pointer;
+}
+
+@font-face {
+    font-family:bebas;
+    src: url(BebasNeue.otf);
+}
+
+.your-class img{
+  width: 215px;
+  height: 150px;
+}
+
+.your-class{
+  background-color: gray;
+  margin-top:40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#image{
+  width: 640px;
+  height: 480px;
+}
+
+.title{
+  font-family: bebas;
+  text-shadow: 3px 3px white;
+  display:inline;
+  z-index: -1;
+  font-size: 100px;
+  position:absolute;
+}
+
+.post{
+    background-color: #71dada;
+    padding:20px;
+    padding-bottom:100px;
+    display:block;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(50, 50, 50, 0.47);
+    -moz-box-shadow:    4px 4px 8px 0px rgba(50, 50, 50, 0.47);
+    box-shadow:         4px 4px 8px 0px rgba(50, 50, 50, 0.47);
+    border-radius: 3px;
+    max-width:640px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color:#221E1D;
+    position:relative;
 }
