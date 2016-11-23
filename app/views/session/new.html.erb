@@ -1,60 +1,7 @@
-<h1>Account</h1>
 
-<div class="session-wrapper">
-
-  <div class="left-box">
-    <% if logged_in? %>
-
-    <%= form_tag '/logout', method: 'post' do %>
-      <input type="hidden" name="_method" value="delete">
-      <button>Logout</button>
-    <% end %>
-
-    <% else %>
-      <h3>Login</h3>
-      <%= form_tag '/session', method: 'post' do %>
-
-        <input type="input" placeholder="email"name="email" value="">
-
-        <input type="password" placeholder="password" name="password" value="">
-        <button>LOGIN</button>
-      <% end %>
-    <% end %>
-
-
-
-    <div class="info">
-      <!--  return message from account creation-->
-      <% if @errors %>
-        <% @errors.each do |key, value| %>
-          <p class="message" id="<%= @type %>">
-          <%= key.to_s.upcase + " " + value.to_s %></p>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="right-box">
-    <% if logged_in? %>
-    <p>Logged in as <%= current_user.email %></p>
-
-    <% else %>
-      <%= form_tag '/session/new_user', method: 'post' do %>
-        <h3>Sign Up</h3>
-        <input type="input" placeholder="email" name="email" value="">
-
-        <input type="password" placeholder="password" name="password" value="">
-
-        <input type="password" placeholder="confirm password" name="password_confirmation" value="">
-
-        <button>SIGN UP</button>
-
-      <% end %>
-    <% end %>
-
-  </div>
+<div class="session-account">
   <% if current_user %>
-    <h1 class="saved-headings">Saved Cards</h1>
+    <h1 class="saved-headings">SAVED CARDS</h1>
     <div class="saved-headings saved-cards-header" >
       <div class="cards-title"><h3>TITLE</h3></div>
       <div class="cards-recipient"><h3>RECIPIENT</h3></div>
@@ -63,8 +10,8 @@
     <div class="saved-card-list">
       <% @saved_cards.each do |card| %>
         <div class="saved-card" id="card_<%= card.id %>">
-          <div class="saved-title"><%= (Title.find(card.title_id)).name %></div>
-          <div class="saved-recipient"><%= card.recipient_name %></div>
+          <div class="saved-title"><p><%= (Title.find(card.title_id)).name %></p></div>
+          <div class="saved-recipient"><p><%= card.recipient_name %></p></div>
           <div class="btn-options">
             <form action="/cards/<%= card.id %>/edit" method="get">
               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -81,19 +28,66 @@
       <% end %>
     </div>
   <% end %>
+</div>
+
+<div class="session-wrapper">
+
+  <div class="session-left-box">
+    <% if !logged_in? %>
+      <h2>LOGIN</h2>
+      <%= form_tag '/session', method: 'post' do %>
+        <div class="session-inputs">
+          <input type="input" placeholder="email"name="email" value="">
+          <input type="password" placeholder="password" name="password" value="">
+        </div>
+        <div class="session-buttons">
+          <button>LOGIN</button>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <div class="info">
+    <!--  return message from account creation-->
+    <% if @errors %>
+      <% @errors.each do |key, value| %>
+        <p class="message" id="<%= @type %>">
+        <%= key.to_s.upcase + " " + value.to_s %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <div class="session-right-box">
+    <% if !logged_in? %>
+      <%= form_tag '/session/new_user', method: 'post' do %>
+        <h2>SIGN UP</h2>
+        <div class="session-inputs">
+          <input type="input" placeholder="email" name="email" value="">
+          <input type="password" placeholder="password" name="password" value="">
+          <input type="password" placeholder="confirm password" name="password_confirmation" value="">
+        </div>
+        <div class="session-buttons">
+          <button>SIGN UP</button>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+<div class="session-logout">
+  <% if logged_in? %>
+    <p>Logged in as <%= current_user.email %></p>
+    <%= form_tag '/logout', method: 'post' do %>
+      <input type="hidden" name="_method" value="delete">
+      <div class="session-buttons">
+        <button>LOGOUT</button>
+      </div>
+    <% end %>
+  <% end %>
 </div>

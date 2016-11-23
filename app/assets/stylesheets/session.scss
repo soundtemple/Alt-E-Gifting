@@ -24,20 +24,94 @@
 }
 
 .saved-headings {
-  margin-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.left-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.right-box {
-  display: flex;
-  flex-direction: column;
-}
 
 .session-wrapper {
   display: flex;
+  flex-direction: row;
+}
+
+.session-logout {
+  display: flex;
+  flex-direction: row;
+}
+
+.session-left-box,
+.session-right-box  {
+  display: flex;
+  height: 300px;
   flex-direction: column;
+  width: 50%;
+  padding-top: 10px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.session-buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+.session-account {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.session-buttons button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #47c1c2;
+  margin: 5%;
+  font-size: 1.2em;
+  border-radius: 5px;
+
+}
+
+.session-buttons button:hover {
+  background-color: #7ededf;
+}
+
+.session-buttons button a {
+  text-decoration: none;
+  color: black;
+}
+
+.session-buttons button .filter {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.session-inputs input {
+  display: block;
+  border: none;
+  border-bottom: 2px solid #47c1c2;
+  font-size: 1.3em;
+  padding: 2%;
+  color: #47c1c2;
+  background: none;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px  ;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+h1, h2, h3, p {
+  color: #47c1c2;
 }
