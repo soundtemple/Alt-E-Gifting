@@ -3,20 +3,20 @@
   <div class="box initial">
     <!-- To and From fields. -->
     <label for="title">Title</label>
-    <select class="title" name="title">
+    <select class="input_t" name="title">
       <% Title.all.each do |title| %>
       <option value="<%= title.id %>"> <%= title.name %></option>
       <% end %>
     </select>
 
-<label for="recipient_name">To</label>
-<input id="input_rn" name="recipient_name">
+    <label for="recipient_name">To</label>
+    <input class="input_rn" name="recipient_name">
 
     <label for="recipient_email">Email</label>
     <input name="recipient_email">
 
     <label for="sign_off">From</label>
-    <input name="sign_off">
+    <input class="input_so" name="sign_off">
 
     <button class="next">Next</button>
   </div>
@@ -24,7 +24,7 @@
   <div class="box">
     <!-- Category and Message Box -->
     <label for="category">Category</label>
-    <select class="category" name="category">
+    <select name="category">
       <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
       <% @categories.each do |category| %>
       <option value="<%= category %>"> <%= category %></option>
@@ -32,9 +32,9 @@
     </select>
 
     <label for="message">Favour</label>
-    <select class="favour-choice" name="message">
+    <select class="input_msg" name="message">
       <% Favour.all.each do |favour| %>
-      <option value="<%= favour.id %>"> <%= favour.message %> </option>
+      <option value="<%= favour.message %>"> <%= favour.message %> </option>
       <% end %>
     </select>
     <!-- <input id="choice-editor"name="favour-input"> -->
@@ -46,7 +46,7 @@
   <div class="box">
     <!-- Background Color Box with Preview -->
     <label for="background_col">Background Colour</label>
-    <input type="color" name="background_col" value="#46C1C2">
+    <input class="input_col" type="color" name="background_col" value="<%= @card.background_col %>">
 
 
     <button class="prev">Back</button>
@@ -61,7 +61,7 @@
 
     <!-- SELECTED IMAGE  -->
     <div class="container">
-        <div class="chosen-image"><img src=""/></div>
+        <div class="chosen-image input_img"><img src=""/></div>
     </div>
 
     <!-- CAROUSEL -->
@@ -77,13 +77,13 @@
   <div class="box">
     <!-- Preview Box -->
     <div class="preview">
-      <div  style="background-color:<%= @card.background_col %>" class="background_col">
+      <div  class="background_col preview_col">
         <div class="background_img">
-          <img height="400" width="600" src="<%= @card.background_img %>" />
+          <img height="400" width="600" class="preview_img"/>
           <div class="card-text">
-            <div class="recipient_name"><%= @card.recipient_name %></div>
-            <div class="card-title"><%= (Title.find(@card.title_id)).name %></div>
-            <div class="card-message"><%= @card.message %></div>
+            <div class="recipient_name preview_rn"><%= @card.recipient_name %></div>
+            <div class="card-title preview_t"><%= (Title.find(@card.title_id)).name %></div>
+            <div class="card-message preview_msg"><%= @card.message %></div>
           </div>
         </div>
       </div>
@@ -95,8 +95,8 @@
     <input type="submit" name="action" value="Save">
     <input type="submit" name="action" value="Save and Send">
   </div>
-
-
+</div>
+<!--
 <script type="text/javascript">
   var recipient_email = <%= @card.recipient_email %>
   var recipient_name = <%= @card.recipient_name %>
@@ -105,4 +105,4 @@
   var message = <%= @card.message %>
   var background_img = <%= @card.background_img %>
   var background_col = <%= @card.background_col %>
-</script>
+</script> -->
