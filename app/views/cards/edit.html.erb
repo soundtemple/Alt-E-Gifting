@@ -1,2 +1,102 @@
-<h1>Cards#edit</h1>
-<p>Find me in app/views/cards/edit.html.erb</p>
+<h1>EDIT CARD</h1>
+<form class="box-wrapper" action="/cards/<%= @card.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="box initial">
+    <!-- To and From fields. -->
+    <label for="title">Title</label>
+    <select class="title" name="title">
+
+      <% Title.all.each do |title| %>
+      <option value="<%= title.id %>"> <%= title.name %></option>
+      <% end %>
+    </select>
+
+    <label for="recipient_name">To</label>
+    <input name="recipient_name" value="<%= @card.recipient_name %>">
+
+    <label for="recipient_email">Email</label>
+    <input name="recipient_email" value="<%= @card.recipient_email %>">
+
+    <label for="sign_off">From</label>
+    <input name="sign_off" value="<%= @card.sign_off %>">
+
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Category and Message Box -->
+    <label for="category">Category</label>
+    <select class="category" name="category">
+      <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
+      <% @categories.each do |category| %>
+      <option value="<%= category %>" > <%= category %></option>
+      <% end %>
+    </select>
+
+    <label for="message">Favour</label>
+    <select class="favour-choice" name="message">
+      <% Favour.all.each do |favour| %>
+      <option value="<%= favour.id %>"> <%= favour.message %> </option>
+      <% end %>
+    </select>
+    <!-- <input id="choice-editor"name="favour-input"> -->
+
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Background Color Box with Preview -->
+    <label for="background_col">Background Colour</label>
+    <input type="color" name="background_col" value="<%= @card.background_col %>">
+
+
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+
+
+    <!-- SEARCH BOX -->
+    <input type="input" id="search_input" placeholder="categorysearch" value="">
+    <button class="search_btn">SEARCH</button>
+
+    <!-- SELECTED IMAGE  -->
+    <div class="container">
+        <div class="chosen-image"><img src="<%= @card.background_img %>"/></div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="image-results your-class"></div>
+    <div class=""></div>
+
+    <button class="prev">Back</button>
+    <button class="next">Preview</button>
+  </div>
+
+
+  <div class="box">
+    <!-- Preview Box -->
+    <div class="preview">
+      <div  style="background-color:<%= @card.background_col %>" class="background_col">
+        <div class="background_img">
+          <div height="400" width="600" class="chosen-image"><img src="<%= @card.background_img %>"/></div>
+          <div class="card-text">
+            <div class="recipient_name"><%= @card.recipient_name %></div>
+            <div class="card-title"><%= (Title.find(@card.title_id)).name %></div>
+            <div class="card-message"><%= @card.message %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sign_off"><%= @card.sign_off %></div>
+    </div>
+
+    <button class="prev">Back</button>
+    <input type="submit" name="action" value="Save">
+    <input type="submit" name="action" value="Save and Send">
+  </div>
+
+</form>

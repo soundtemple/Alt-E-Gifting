@@ -60,7 +60,7 @@ job.each do |num|
  Favour.create(category: 'career', message: "#{num}")
 end
 
-text = ['Just Because']
+text = ['just because', 'suck it!', 'i wuv you', 'i owe you']
 
 text.each do |num|
   Title.create(name: "#{num}")
@@ -69,6 +69,6 @@ end
 users = [u1,u2,u3,u4]
 
 users.each do |user|
-  Card.create(user_id: user.id, recipient_email: 'dt@ga.co', recipient_name: 'DT', title_id: Title.first.id, message: 'I will give you career advice',
+  Card.create(user_id: user.id, recipient_email: 'dt_wdi@ga.com', recipient_name: 'DT', title_id: Title.first.id, sign_off: 'Harry', message: 'I will give you career advice',
    background_img: 'http://appointmentsbilanguage.co.uk/wp-content/uploads/2015/07/Career-Advice.jpg', background_col: '#933a4c' )
 end

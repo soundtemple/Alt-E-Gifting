@@ -56,6 +56,23 @@
 
   <div class="box">
 
+<div class="box">
+  <!-- Preview Box -->
+  <div class="preview">
+    <div class="preview">
+      <div  style="background-color:<%= @card.background_col %>" class="background_col">
+        <div class="background_img">
+          <img height="400" width="600" src="<%= @card.background_img %>" />
+          <div class="card-text">
+            <div class="recipient_name"><%= @card.recipient_name %></div>
+            <div class="card-title"><%= (Title.find(@card.title_id)).name %></div>
+            <div class="card-message"><%= @card.message %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sign_off"><%= @card.sign_off %></div>
+    </div>
 
     <!-- SEARCH BOX -->
     <input type="input" id="search_input" placeholder="categorysearch" value="">

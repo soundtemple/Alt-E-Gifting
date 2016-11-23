@@ -9,11 +9,20 @@ class CardsController < ApplicationController
       redirect_to '/'
     end
 
+    @card = Card.new
+    @card.recipient_email = ""
+    @card.recipient_name = ""
+    @card.title_id = Title.first.id
+    @card.sign_off = ""
+    @card.message = Favour.first.message
+    @card.background_img = ""
+    @card.background_col = "#46c1c2"
+
   end
 
   def create
     card = Card.new
-    card.user_id = current_user
+    card.user_id = current_user.id
     card.recipient_email = params[:recipient_email]
     card.recipient_name = params[:recipient_name]
     card.title_id = params[:title].to_i
@@ -42,11 +51,10 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find_by(id: params[:id])
-    @card.user_id = current_user
     @card.recipient_email = params[:recipient_email]
     @card.recipient_name = params[:recipient_name]
+    @card.title_id = params[:title].to_i
     @card.sign_off = params[:sign_off]
-    @card.title_id = params[:title]
     @card.message = params[:message]
     @card.background_img = params[:background_img]
     @card.background_col = params[:background_col]
