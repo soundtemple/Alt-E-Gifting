@@ -7,27 +7,32 @@
   <button class="next">Next</button>
 </div> -->
 
-<div class="box-wrapper">
+<form class="box-wrapper" action="/cards/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div class="box initial">
-    <!-- Particular fields here -->
+    <!-- To and From fields. -->
     <label for="title">Title</label>
     <select class="title" name="title">
+
       <% @titles.each do |title| %>
       <option value="<%= title.id %>"> <%= title.name %></option>
       <% end %>
     </select>
 
-    <label for="name">Name</label>
-    <input name="name">
+    <label for="recipient_name">To</label>
+    <input name="recipient_name">
 
-    <label for="email">Email</label>
-    <input name="email">
+    <label for="recipient_email">Email</label>
+    <input name="recipient_email">
+
+    <label for="sign_off">From</label>
+    <input name="sign_off">
 
     <button class="next">Next</button>
   </div>
 
   <div class="box">
-    <!-- Particular fields here -->
+    <!-- Category and Message Box -->
     <label for="category">Category</label>
     <select class="category" name="category">
       <% @categories.each do |category| %>
@@ -35,13 +40,23 @@
       <% end %>
     </select>
 
-    <label for="favour-choice">Favour</label>
-    <select class="favour-choice" name="favour-choice">
-      <% @favours.each do |favour| %>
+    <label for="message">Favour</label>
+    <select class="favour-choice" name="message">
+      <% Favour.all.each do |favour| %>
       <option value="<%= favour.id %>"> <%= favour.message %> </option>
       <% end %>
     </select>
-    <input name="favour-input">
+    <!-- <input id="choice-editor"name="favour-input"> -->
+
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Background Color Box with Preview -->
+    <label for="background_col">Background Colour</label>
+    <input type="color" name="background_col" value="#46C1C2">
+
 
     <button class="prev">Back</button>
     <button class="next">Next</button>
@@ -49,27 +64,28 @@
 
   <div class="box">
     <!-- Particular fields here -->
-    <label for="background_colour">Background Colour</label>
-    <select class="background_colour" name="background_colour">
-      <% @background_colours.each do |colour| %>
-      <option value="<%= colour %>"> <%= colour %> </option>
-      <% end %>
-    </select>
-
-    <button class="prev">Back</button>
-    <button class="next">Next</button>
-  </div>
-
-  <div class="box">
-    <!-- Particular fields here -->
-    <label for="background_image">Background Image</label>
-    <select class="background_colour" name="background_image">
+    <label for="background_img">Background Image</label>
+    <select name="background_img">
       <% @background_images.each do |image| %>
       <option value="<%= image %>"> <%= image %> </option>
       <% end %>
     </select>
 
     <button class="prev">Back</button>
-    <button class="submit">Submit</button>
+    <button class="next">Preview</button>
   </div>
-</div>
+
+
+  <div class="box">
+    <!-- Preview Box -->
+    <div class="preview">
+
+    </div>
+
+    <button class="prev">Back</button>
+    <input type="submit" name="action" value="Save">
+    <input type="submit" name="action" value="Save and Send">
+  </div>
+
+
+</form>
