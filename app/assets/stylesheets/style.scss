@@ -1,25 +1,44 @@
 body{
   font-family: arial;
+  background-color: #E6F4F6;
 }
 
-// .nav{
-//   list-style:none;
-//   margin:0;
-//   padding:0;
-//   text-align:center;
-//   // padding:18px;
-// }
-//
-// .nav li{
-//     display:inline;
-// }
-//
-// .nav a{
-//     display:inline-block;
-//     padding:2px 10px 8px;
-//     color:white;
-//     text-decoration: none;
-//     font-size: 22px;
-//     margin:0px;
-//     margin-right:100px;
-// }
+//STYLE FOR APPLICATION.HTML.ERB
+
+.nav{
+  background-color: #47C1C2;
+  padding:100px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+
+.nav li{
+    display:inline;
+}
+
+.nav a{
+    display:inline-block;
+    padding:2px 5px 8px;
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    margin:0px;
+}
+
+.logo{
+  width:350px;
+  padding:5px;
+}
+
+#nav-new-card{
+  text-align: left;
+  margin-right:50px;
+}
+
+
+#nav-login{
+  text-align: right;
+  margin-left:100px;
+}
