@@ -60,7 +60,7 @@ job.each do |num|
  Favour.create(category: 'career', message: "#{num}")
 end
 
-text = ['Just Becasue']
+text = ['Just Because']
 
 text.each do |num|
   Title.create(name: "#{num}")
