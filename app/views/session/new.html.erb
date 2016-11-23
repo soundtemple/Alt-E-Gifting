@@ -66,8 +66,10 @@
           <div class="saved-title"><%= (Title.find(card.title_id)).name %></div>
           <div class="saved-recipient"><%= card.recipient_name %></div>
           <div class="btn-options">
-            <button>DELETE</button>
-            <button>EDIT</button>
+            <form action="/cards/<%= card.id %>/edit" method="get">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <button>EDIT</button>
+            </form>
             <button>SEND</button>
           </div>
         </div>

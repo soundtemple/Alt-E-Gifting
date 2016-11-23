@@ -42,11 +42,10 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find_by(id: params[:id])
-    @card.user_id = current_user
     @card.recipient_email = params[:recipient_email]
     @card.recipient_name = params[:recipient_name]
+    @card.title_id = params[:title].to_i
     @card.sign_off = params[:sign_off]
-    @card.title_id = params[:title]
     @card.message = params[:message]
     @card.background_img = params[:background_img]
     @card.background_col = params[:background_col]
