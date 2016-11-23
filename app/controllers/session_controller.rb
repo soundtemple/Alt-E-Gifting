@@ -1,5 +1,6 @@
 class SessionController < ApplicationController
   def new
+    @card = Card.find_by(id: params[:id])
   end
 
   def create
