@@ -1,6 +1,8 @@
 class SessionController < ApplicationController
   def new
-    @saved_cards = Card.where(user_id: current_user.id)
+    if current_user
+      @saved_cards = Card.where(user_id: current_user.id)
+    end
   end
 
   def create
