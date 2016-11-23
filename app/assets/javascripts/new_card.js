@@ -10,6 +10,8 @@ $(document).ready(function() {
   })
 
   $('.next').click(function(e) {
+    e.preventDefault();
+
     var $main = $($(this).closest(".box"));
     $main.hide();
     var $next = $($main.next('.box'));
@@ -17,6 +19,8 @@ $(document).ready(function() {
   })
 
   $('.prev').click(function(e) {
+    e.preventDefault();
+
     var $main = $($(this).closest(".box"));
     $main.hide();
     var $prev = $($main.prev('.box'));
