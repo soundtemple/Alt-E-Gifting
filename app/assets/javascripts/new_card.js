@@ -13,7 +13,7 @@ $(document).ready(function() {
     e.preventDefault();
 
     // changes the preview to be equal to the input
-    $('.preview_t').text($('.input_t').val());
+    $('.preview_t').text($('.input_t').text());
     $('.preview_rn').text($('.input_rn').val());
     $('.preview_so').text($('.input_so').val());
     $('.preview_msg').text($('.input_msg').val());
@@ -36,5 +36,5 @@ $(document).ready(function() {
     $prev.show();
   })
 
-  
+
 })
