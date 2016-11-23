@@ -13,12 +13,12 @@ $(document).ready(function() {
     e.preventDefault();
 
     // changes the preview to be equal to the input
-    $('.preview_t').html($('.input_t').value());
-    $('.preview_rn').text($('.input_rn').value());
-    $('.preview_so').text($('.input_so').value());
-    $('.preview_msg').html($('.input_msg').value());
-    $('.preview_col').css("background-color",$('.input_col').value());
-    $('.preview_img').attr("src",($('.input_img').attr("src"));
+    $('.preview_t').text($('.input_t').val());
+    $('.preview_rn').text($('.input_rn').val());
+    $('.preview_so').text($('.input_so').val());
+    $('.preview_msg').text($('.input_msg').val());
+    $('.preview_col').css("background-color",$('.input_col').val());
+    $('.preview_img').attr("src",($('.input_img').attr("src")));
 
 
     var $main = $($(this).closest(".box"));
@@ -35,4 +35,6 @@ $(document).ready(function() {
     var $prev = $($main.prev('.box'));
     $prev.show();
   })
+
+  
 })
