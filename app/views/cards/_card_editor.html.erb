@@ -1,77 +1,60 @@
-<div class="box initial">
-  <!-- To and From fields. -->
-  <label for="title">Title</label>
-  <select class="title" name="title">
+<div class="content">
 
-    <% Title.all.each do |title| %>
-    <option value="<%= title.id %>"> <%= title.name %></option>
-    <% end %>
-  </select>
+  <div class="box initial">
+    <!-- To and From fields. -->
+    <label for="title">Title</label>
+    <select class="title" name="title">
 
-  <label for="recipient_name">To</label>
-  <input name="recipient_name">
+      <% Title.all.each do |title| %>
+      <option value="<%= title.id %>"> <%= title.name %></option>
+      <% end %>
+    </select>
 
-  <label for="recipient_email">Email</label>
-  <input name="recipient_email">
+    <label for="recipient_name">To</label>
+    <input name="recipient_name">
 
-  <label for="sign_off">From</label>
-  <input name="sign_off">
+    <label for="recipient_email">Email</label>
+    <input name="recipient_email">
 
-  <button class="next">Next</button>
-</div>
+    <label for="sign_off">From</label>
+    <input name="sign_off">
 
-<div class="box">
-  <!-- Category and Message Box -->
-  <label for="category">Category</label>
-  <select class="category" name="category">
-    <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
-    <% @categories.each do |category| %>
-    <option value="<%= category %>"> <%= category %></option>
-    <% end %>
-  </select>
-
-  <label for="message">Favour</label>
-  <select class="favour-choice" name="message">
-    <% Favour.all.each do |favour| %>
-    <option value="<%= favour.id %>"> <%= favour.message %> </option>
-    <% end %>
-  </select>
-  <!-- <input id="choice-editor"name="favour-input"> -->
-
-  <button class="prev">Back</button>
-  <button class="next">Next</button>
-</div>
-
-<div class="box">
-  <!-- Background Color Box with Preview -->
-  <label for="background_col">Background Colour</label>
-  <input type="color" name="background_col" value="#46C1C2">
-
-
-  <button class="prev">Back</button>
-  <button class="next">Next</button>
-</div>
-
-<div class="box">
-
-
-  <!-- SEARCH BOX -->
-  <input type="input" id="search_input" placeholder="categorysearch" value="">
-  <button class="search_btn">SEARCH</button>
-
-  <!-- SELECTED IMAGE  -->
-  <div class="container">
-      <div class="chosen-image"><img src=""/></div>
+    <button class="next">Next</button>
   </div>
 
-  <!-- CAROUSEL -->
-  <div class="image-results your-class"></div>
-  <div class=""></div>
+  <div class="box">
+    <!-- Category and Message Box -->
+    <label for="category">Category</label>
+    <select class="category" name="category">
+      <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
+      <% @categories.each do |category| %>
+      <option value="<%= category %>"> <%= category %></option>
+      <% end %>
+    </select>
 
-  <button class="prev">Back</button>
-  <button class="next">Preview</button>
-</div>
+    <label for="message">Favour</label>
+    <select class="favour-choice" name="message">
+      <% Favour.all.each do |favour| %>
+      <option value="<%= favour.id %>"> <%= favour.message %> </option>
+      <% end %>
+    </select>
+    <!-- <input id="choice-editor"name="favour-input"> -->
 
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
+    <!-- Background Color Box with Preview -->
+    <label for="background_col">Background Colour</label>
+    <input type="color" name="background_col" value="#46C1C2">
+
+
+    <button class="prev">Back</button>
+    <button class="next">Next</button>
+  </div>
+
+  <div class="box">
 
 <div class="box">
   <!-- Preview Box -->
@@ -91,9 +74,33 @@
       <div class="sign_off"><%= @card.sign_off %></div>
     </div>
 
+    <!-- SEARCH BOX -->
+    <input type="input" id="search_input" placeholder="categorysearch" value="">
+    <button class="search_btn">SEARCH</button>
+
+    <!-- SELECTED IMAGE  -->
+    <div class="container">
+        <div class="chosen-image"><img src=""/></div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="image-results your-class"></div>
+    <div class="space"></div>
+
+    <button class="prev">Back</button>
+    <button class="next">Preview</button>
   </div>
 
-  <button class="prev">Back</button>
-  <input type="submit" name="action" value="Save">
-  <input type="submit" name="action" value="Save and Send">
-</div>
+
+  <div class="box">
+    <!-- Preview Box -->
+    <div class="preview">
+
+    </div>
+
+    <button class="prev">Back</button>
+    <input type="submit" name="action" value="Save">
+    <input type="submit" name="action" value="Save and Send">
+  </div>
+
+  </div>
