@@ -21,5 +21,5 @@ $(document).ready(function() {
     $main.hide();
     var $prev = $($main.prev('.box'));
     $prev.show();
-  })  
+  })
 })
