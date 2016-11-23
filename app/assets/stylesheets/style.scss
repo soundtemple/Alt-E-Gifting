@@ -12,6 +12,8 @@ body{
   margin:0;
   padding:0;
   text-align:center;
+  // border-bottom:3px solid #00281f;
+  // FDBA16
 }
 
 .nav li{
@@ -43,12 +45,45 @@ body{
   margin-left:100px;
 }
 
-footer{
-  background-color: #47C1C2;
-  color:white;
-  position: absolute;
-  bottom: 0;
-  width:100%;
-  padding:30px;
-  border-top: 2px solid white;
+// footer{
+//   background-color: #47C1C2;
+//   color:white;
+//   bottom: 0;
+//   width:100%;
+//   padding:15px;
+//   border-top: 2px solid white;
+//   position:fixed;
+//   margin-top: 150 px;
+// }
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+
+// NEW CARD ENTRY - STYLE FOR EACH DIV
+
+.box{
+  max-width:800px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.space{
+  height:50px;
+}
+
+.prev{
+
+}
+
+.next{
+
 }

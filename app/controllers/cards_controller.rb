@@ -12,7 +12,7 @@ class CardsController < ApplicationController
     @card = Card.new
     @card.recipient_email = ""
     @card.recipient_name = ""
-    @card.title_id = 2
+    @card.title_id = Title.first.id
     @card.sign_off = ""
     @card.message = Favour.first.message
     @card.background_img = ""
