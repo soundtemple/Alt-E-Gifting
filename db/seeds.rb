@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Favour.destroy_all
-User.destroy_all
 Card.destroy_all
+User.destroy_all
 Title.destroy_all
 
 u1 = User.create(email: 'ej@ga.co', password: 'admin')
