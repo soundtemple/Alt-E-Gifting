@@ -46,7 +46,7 @@ img:hover {
   height: 480px;
 }
 
-.title{
+#title{
   font-family: bebas;
   text-shadow: 3px 3px white;
   display:inline;
