@@ -1,6 +1,6 @@
 <h1>Account</h1>
 
-<div class="wrapper">
+<div class="session-wrapper">
 
   <div class="left-box">
     <% if logged_in? %>
@@ -53,8 +53,8 @@
     <% end %>
 
   </div>
-  <h1 class="cards-headings">Saved Cards</h1>
-  <div class="cards-headings saved-cards-header" >
+  <h1 class="saved-headings">Saved Cards</h1>
+  <div class="saved-headings saved-cards-header" >
     <div class="cards-title"><h3>TITLE</h3></div>
     <div class="cards-recipient"><h3>RECIPIENT</h3></div>
     <div class="actions"><h3>ACTIONS</h3></div>
@@ -62,8 +62,8 @@
   <div class="saved-card-list">
     <% @saved_cards.each do |card| %>
       <div class="saved-card" id="card_<%= card.id %>">
-        <div class="card-title"><%= (Title.find(card.title_id)).name %></div>
-        <div class="card-recipient"><%= card.recipient_name %></div>
+        <div class="saved-title"><%= (Title.find(card.title_id)).name %></div>
+        <div class="saved-recipient"><%= card.recipient_name %></div>
         <div class="btn-options">
           <button>DELETE</button>
           <button>EDIT</button>
