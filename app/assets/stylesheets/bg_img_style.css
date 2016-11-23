@@ -6,15 +6,9 @@ img:hover {
   cursor: pointer;
 }
 
-.container {
-  width: 80%;
-}
-
 .chosen-image {
   width: 640px;
   height: 480px;
-  background-size: cover;
-  margin: 0 auto;
   background-color: white;
   padding:20px;
   padding-bottom: 100px;
@@ -37,8 +31,6 @@ img:hover {
 .your-class{
   background-color: gray;
   margin-top:40px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 #image{
@@ -55,7 +47,7 @@ img:hover {
   position:absolute;
 }
 
-.post{
+/*.post{
     background-color: #71dada;
     padding:20px;
     padding-bottom:100px;
@@ -70,4 +62,4 @@ img:hover {
     margin-bottom: 40px;
     color:#221E1D;
     position:relative;
-}
+}*/
