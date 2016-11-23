@@ -60,17 +60,24 @@
     <div class="actions"><h3>ACTIONS</h3></div>
   </div>
   <div class="saved-card-list">
-    <div class="saved-card" id="card#1">
-      <div class="card-title">Just because</div>
-      <div class="card-recipient">Billy Bob</div>
-      <div class="btn-options">
-        <button>DELETE</button>
-        <button>EDIT</button>
-        <button>SEND</button>
+    <% @saved_cards.each do |card| %>
+      <div class="saved-card" id="card_<%= card.id %>">
+        <div class="card-title"><%= (Title.find(card.title_id)).name %></div>
+        <div class="card-recipient"><%= card.recipient_name %></div>
+        <div class="btn-options">
+          <button>DELETE</button>
+          <button>EDIT</button>
+          <button>SEND</button>
+        </div>
       </div>
-    </div>
-
+    <% end %>
   </div>
+
+
+
+
+
+
 
 
 

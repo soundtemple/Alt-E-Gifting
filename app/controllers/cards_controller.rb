@@ -23,7 +23,7 @@ class CardsController < ApplicationController
     card.recipient_email = params[:recipient_email]
     card.recipient_name = params[:recipient_name]
     card.sign_off = params[:sign_off]
-    card.title = params[:title]
+    card.title_id = params[:title]
     card.message = params[:message]
     card.background_img = params[:background_img]
     card.background_col = params[:background_col]
@@ -36,7 +36,7 @@ class CardsController < ApplicationController
 
   def show
     @card = Card.find_by(id: params[:id])
-    
+
   end
 
   def edit
@@ -49,7 +49,7 @@ class CardsController < ApplicationController
     @card.recipient_email = params[:recipient_email]
     @card.recipient_name = params[:recipient_name]
     @card.sign_off = params[:sign_off]
-    @card.title = params[:title]
+    @card.title_id = params[:title]
     @card.message = params[:message]
     @card.background_img = params[:background_img]
     @card.background_col = params[:background_col]

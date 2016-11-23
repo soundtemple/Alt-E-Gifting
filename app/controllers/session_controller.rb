@@ -1,6 +1,6 @@
 class SessionController < ApplicationController
   def new
-    @card = Card.find_by(id: params[:id])
+    @saved_cards = Card.where(user_id: current_user.id)
   end
 
   def create
