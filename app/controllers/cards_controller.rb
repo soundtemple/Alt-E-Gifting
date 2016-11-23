@@ -9,6 +9,15 @@ class CardsController < ApplicationController
       redirect_to '/'
     end
 
+    @card = Card.new
+    @card.recipient_email = ""
+    @card.recipient_name = ""
+    @card.title_id = 2
+    @card.sign_off = ""
+    @card.message = Favour.first
+    @card.background_img = ""
+    @card.background_col = "#46c1c2"
+
   end
 
   def create
