@@ -34,7 +34,7 @@
     <label for="message">Favour</label>
     <select class="input_msg" name="message">
       <% Favour.all.each do |favour| %>
-      <option value="<%= favour.id %>"> <%= favour.message %> </option>
+      <option value="<%= favour.message %>"> <%= favour.message %> </option>
       <% end %>
     </select>
     <!-- <input id="choice-editor"name="favour-input"> -->
