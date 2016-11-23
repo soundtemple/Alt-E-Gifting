@@ -9,14 +9,6 @@ class CardsController < ApplicationController
       redirect_to '/'
     end
 
-    @favours = Favour.all
-    @titles = Title.all
-
-    @categories = @favours.collect{ |f| f.category }.uniq
-
-    @background_colours = ['teal','mistyrose','black', 'red']
-
-    @background_images = ['puppy', 'kitten', 'ostrich', 'parrot']
   end
 
   def create

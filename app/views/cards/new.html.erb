@@ -1,5 +1,4 @@
 <h1>NEW CARD</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
 
 <!-- <div class="box">
   Particular fields here
@@ -14,7 +13,7 @@
     <label for="title">Title</label>
     <select class="title" name="title">
 
-      <% @titles.each do |title| %>
+      <% Title.all.each do |title| %>
       <option value="<%= title.id %>"> <%= title.name %></option>
       <% end %>
     </select>
@@ -35,6 +34,7 @@
     <!-- Category and Message Box -->
     <label for="category">Category</label>
     <select class="category" name="category">
+      <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
       <% @categories.each do |category| %>
       <option value="<%= category %>"> <%= category %></option>
       <% end %>
