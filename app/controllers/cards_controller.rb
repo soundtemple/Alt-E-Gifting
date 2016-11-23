@@ -31,6 +31,7 @@ class CardsController < ApplicationController
     card.background_img = params[:background_img]
     card.background_col = params[:background_col]
 
+
     if card.save
       if params[:action].include?("Send")
       end

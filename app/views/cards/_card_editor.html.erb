@@ -4,14 +4,13 @@
     <!-- To and From fields. -->
     <label for="title">Title</label>
     <select class="title" name="title">
-
       <% Title.all.each do |title| %>
       <option value="<%= title.id %>"> <%= title.name %></option>
       <% end %>
     </select>
 
-    <label for="recipient_name">To</label>
-    <input name="recipient_name">
+<label for="recipient_name">To</label>
+<input id="input_rn" name="recipient_name">
 
     <label for="recipient_email">Email</label>
     <input name="recipient_email">
@@ -54,26 +53,8 @@
     <button class="next">Next</button>
   </div>
 
-  <div class="box">
 
 <div class="box">
-  <!-- Preview Box -->
-  <div class="preview">
-    <div class="preview">
-      <div  style="background-color:<%= @card.background_col %>" class="background_col">
-        <div class="background_img">
-          <img height="400" width="600" src="<%= @card.background_img %>" />
-          <div class="card-text">
-            <div class="recipient_name"><%= @card.recipient_name %></div>
-            <div class="card-title"><%= (Title.find(@card.title_id)).name %></div>
-            <div class="card-message"><%= @card.message %></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sign_off"><%= @card.sign_off %></div>
-    </div>
-
     <!-- SEARCH BOX -->
     <input type="input" id="search_input" placeholder="categorysearch" value="">
     <button class="search_btn">SEARCH</button>
@@ -89,18 +70,39 @@
 
     <button class="prev">Back</button>
     <button class="next">Preview</button>
-  </div>
+</div>
+
 
 
   <div class="box">
     <!-- Preview Box -->
     <div class="preview">
+      <div  style="background-color:<%= @card.background_col %>" class="background_col">
+        <div class="background_img">
+          <img height="400" width="600" src="<%= @card.background_img %>" />
+          <div class="card-text">
+            <div class="recipient_name"><%= @card.recipient_name %></div>
+            <div class="card-title"><%= (Title.find(@card.title_id)).name %></div>
+            <div class="card-message"><%= @card.message %></div>
+          </div>
+        </div>
+      </div>
+      <div class="sign_off"><%= @card.sign_off %></div>
+
 
     </div>
-
     <button class="prev">Back</button>
     <input type="submit" name="action" value="Save">
     <input type="submit" name="action" value="Save and Send">
   </div>
 
-  </div>
+
+<script type="text/javascript">
+  var recipient_email = <%= @card.recipient_email %>
+  var recipient_name = <%= @card.recipient_name %>
+  var title_id = <%= @card.title_id %>
+  var sign_off = <%= @card.sign_off %>
+  var message = <%= @card.message %>
+  var background_img = <%= @card.background_img %>
+  var background_col = <%= @card.background_col %>
+</script>
