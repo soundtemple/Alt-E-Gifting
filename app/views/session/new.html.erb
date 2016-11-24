@@ -12,17 +12,16 @@
         <div class="saved-card" id="card_<%= card.id %>">
           <div class="saved-title"><p><%= (Title.find(card.title_id)).name %></p></div>
           <div class="saved-recipient"><p><%= card.recipient_name %></p></div>
-          <div class="btn-options">
-            <form action="/cards/<%= card.id %>/edit" method="get">
-              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <div class="session-btn-options">
+            <%= form_tag "/cards/#{card.id}/edit", method: 'get' do %>
               <button>EDIT</button>
-            </form>
-            <form action="/cards/<%= card.id %>" method="post">
-              <input type="hidden" name="_method" value="delete">
-              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-              <button>DELETE</button>
-            </form>
-            <button>SEND</button>
+            <% end %>
+            <%= form_tag "/cards/#{card.id}", method: 'delete' do %>
+                <button>DELETE</button>
+            <% end %>
+            <%= form_tag "/cards/#{card.id}/send", method: 'post' do %>
+              <button>SEND</button>
+            <% end %>
           </div>
         </div>
       <% end %>
@@ -47,18 +46,6 @@
     <% end %>
   </div>
 
-
-  <div class="info">
-    <!--  return message from account creation-->
-    <% if @errors %>
-      <% @errors.each do |key, value| %>
-        <p class="message" id="<%= @type %>">
-        <%= key.to_s.upcase + " " + value.to_s %></p>
-      <% end %>
-    <% end %>
-  </div>
-
-
   <div class="session-right-box">
     <% if !logged_in? %>
       <%= form_tag '/session/new_user', method: 'post' do %>
@@ -77,16 +64,23 @@
 
 </div>
 
-
+<div class="info">
+  <!--  return message from account creation-->
+  <% if @errors %>
+    <% @errors.each do |key, value| %>
+      <p class="message" id="<%= @type %>">
+      <%= key.to_s.upcase + " " + value.to_s %></p>
+    <% end %>
+  <% end %>
+</div>
 
 
 <div class="session-logout">
   <% if logged_in? %>
     <p>Logged in as <%= current_user.email %></p>
-    <%= form_tag '/logout', method: 'post' do %>
-      <input type="hidden" name="_method" value="delete">
+    <%= form_tag '/logout', method: 'delete' do %>
       <div class="session-buttons">
-        <button>LOGOUT</button>
+        <button>LOGOUT <%= current_user.email %></button>
       </div>
     <% end %>
   <% end %>

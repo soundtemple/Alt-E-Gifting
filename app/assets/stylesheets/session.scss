@@ -15,7 +15,8 @@
   justify-content: space-between;
   width: 80%;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #42c1c2;
 }
 
 .saved-card-list {
@@ -28,6 +29,10 @@
   margin-bottom: 10px;
 }
 
+.session-btn-options {
+  display: flex;
+  flex-direction: row;
+}
 
 .session-wrapper {
   display: flex;
@@ -56,7 +61,7 @@
 }
 
 .session-account {
-  width: 80%;
+  width: 90%;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -100,6 +105,10 @@
   width: 80%;
   padding-top: 20px;
   padding-bottom: 20px  ;
+}
+
+form {
+  margin-top: 0;
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }

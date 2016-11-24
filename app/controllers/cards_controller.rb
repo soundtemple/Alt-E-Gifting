@@ -70,7 +70,7 @@ class CardsController < ApplicationController
     @card = Card.find_by(id: params[:id])
     @card.delete
     if @card.delete
-      redirect_to '/cards'
+      redirect_to '/session' 
     else
       render template: "session"
     end
