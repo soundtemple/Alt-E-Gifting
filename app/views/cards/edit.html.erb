@@ -1,6 +1,6 @@
 <h1>EDIT CARD</h1>
-<form class="box-wrapper" action="/cards/<%= @card.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<%= form_tag "/cards/#{@card.id}", method: 'patch' do %>
   <%= render "card_editor" %>
+<% end %>
 
 </form>
