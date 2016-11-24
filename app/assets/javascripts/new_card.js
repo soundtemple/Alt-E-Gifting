@@ -13,12 +13,6 @@ $(document).ready(function() {
     e.preventDefault();
 
     // changes the preview to be equal to the input
-    $('.preview_t').text($('.input_t').text());
-    $('.preview_rn').text($('.input_rn').val());
-    $('.preview_so').text($('.input_so').val());
-    $('.preview_msg').text($('.input_msg').val());
-    $('.preview_col').css("background-color",$('.input_col').val());
-    $('.preview_img').attr("src",($('.input_img').attr("src")));
 
 
     var $main = $($(this).closest(".box"));
@@ -35,5 +29,23 @@ $(document).ready(function() {
     var $prev = $($main.prev('.box'));
     $prev.show();
   });
+
+  $('.input_t').change(function() {
+    $('.preview_t').text($('.input_t').text());
+  });
+
+  $('.input_msg').change(function() {
+    $('.preview_msg').text($('.input_msg').val());
+  });
+
+  $('.input_col').change(function() {
+    $('.preview_col').css("background-color",$('.input_col').val());
+  });
+
+
+  // Code in bg_imgs.js
+  // $('.your-class').click(function() {
+  //   $('.preview_img').attr("src",($().attr("src")));
+  // });
 
 })
