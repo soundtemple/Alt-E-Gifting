@@ -12,6 +12,10 @@ body{
   margin:0;
   padding:0;
   text-align:center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .nav li{
@@ -169,4 +173,16 @@ body{
 
 .input_col{
   height:350px;
+}
+
+
+// MENU LAYOUT
+#m_user {
+  height: 50px;
+  width: 50px;
+}
+
+#m_create {
+  height: 50px;
+  width: 50px;
 }
