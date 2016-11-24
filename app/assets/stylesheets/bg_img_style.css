@@ -31,12 +31,15 @@ img:hover {
 }
 
 .your-class img{
-  width: 215px;
-  height: 150px;
+  width: 100px;
+  height: 75px;
+  border-right: 3px solid white;
 }
 
 .your-class{
-  background-color: gray;
+  background-color: white;
+  overflow: scroll;
+  height:380px;
 }
 
 #image{

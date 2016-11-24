@@ -9,14 +9,13 @@ var cardImage;
 
 $(document).ready(function() {
   // Sets up a dummy so the first ajax call work
-  $('.your-class').slick({
-     dots: true,
-     infinite: true,
-     speed: 300,
-     slidesToShow: 1,
-     centerMode: true,
-     variableWidth: true
-   });
+  // $('.your-class').slick({
+  //   autoPlay:true,
+  //   dots: false,
+  //   arrows: true,
+  //   vertical: true,
+  //   slidesToShow: 1
+  //  });
 
   $('.search_btn').click(function(e) {
     // prevent form sending form
@@ -42,7 +41,7 @@ $(document).ready(function() {
 
 //reintialize slick
 function unsl(){
-   $('.your-class').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
+  //  $('.your-class').slick('unslick'); /* ONLY remove the classes and handlers added on initialize */
    $('.your-class').empty();
 }
 
@@ -69,19 +68,23 @@ function displayImages(pixabayResults){
     });
   }
 
+  // $('.your-class').slick('unslick').slick('reinit');
+
+  // $('.your-class').slick('setPosition');
   //puts the images in the slider
-  $('.your-class').slick({
-    autoPlay:true,
-    dots: false,
-    arrows: true,
-    vertical: true,
-    //  dots: true,
-    //  infinite: true,
-    //  speed: 300,
-     slidesToShow: 3,
-    //  centerMode: true,
-    //  variableWidth: true
-   });
+  // $('.your-class').slick({
+  //   autoPlay:true,
+  //   dots: false,
+  //   arrows: true,
+  //   vertical: true,
+  //   slidesToShow: 3,
+  //   infinite: true
+  //    //  dots: true,
+  //    //  infinite: true,
+  //    //  speed: 300,
+  //   //  centerMode: true,
+  //   //  variableWidth: true
+  //  });
 };
 
 
