@@ -6,7 +6,7 @@ class CardsController < ApplicationController
   def new
 
     if !current_user
-      redirect_to '/'
+      redirect_to '/session'
     end
 
     @card = Card.new
