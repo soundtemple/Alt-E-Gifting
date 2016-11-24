@@ -56,18 +56,6 @@ body{
 //   margin-top: 150 px;
 // }
 
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1;
-}
-
 // NEW CARD ENTRY - STYLE FOR EACH DIV
 
 .box{
@@ -88,11 +76,9 @@ body {
 
 }
 
-form{
+.content{
   margin-top: 70px;
 }
-
-
 
 .box input, .box select, .box textarea {
   font-family: "Roboto", sans-serif;
@@ -100,7 +86,7 @@ form{
   background: white;
   width: 100%;
   border: 0;
-  margin: 0 0 15px;
+  margin: 25px 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 18px;
@@ -112,13 +98,16 @@ form{
   font-family: roboto;
 }
 
+.prev, .next{
+  margin-top: 25px;
+}
 
-.box button {
+.prev{
   font-family: roboto;
   text-transform: uppercase;
   outline: 0;
   background: #D96358;
-  width: 100%;
+  width: 20%;
   border: 0;
   padding: 15px;
   color: #FFFFFF;
@@ -126,4 +115,36 @@ form{
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  float:left;
+  border-radius: 4px;
+  border-bottom: 3px solid #d55044;
+}
+
+.next{
+  font-family: roboto;
+  text-transform: uppercase;
+  outline: 0;
+  background: #D96358;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 22px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  float:right;
+  border-radius: 4px;
+  border-bottom: 3px solid #d55044;
+}
+
+
+.next:hover {
+  background-color: #e38a82;
+}
+
+.button:active{
+  background-color: #e38a82;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
