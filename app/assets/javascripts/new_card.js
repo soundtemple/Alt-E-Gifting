@@ -34,14 +34,6 @@ $(document).ready(function() {
     $('.preview_t').text($('.input_t').text());
   });
 
-  $('.input_rn').change(function() {
-    $('.preview_rn').text($('.input_rn').val());
-  });
-
-  $('.input_so').change(function() {
-    $('.preview_so').text($('.input_so').val());
-  });
-
   $('.input_msg').change(function() {
     $('.preview_msg').text($('.input_msg').val());
   });
