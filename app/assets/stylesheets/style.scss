@@ -1,20 +1,6 @@
-@font-face {
-  font-family: "Bebas";
-  src: font-url('assets/fonts/BebasNeue.otf') format('opentype');
-}
-
-
 body{
   font-family: arial;
   background-color: #E6F4F6;
-}
-
-.headings{
-  text-align: left;
-  color:black;
-  margin-bottom: 5px;
-  font-size: 40px;
-  font-family: bebas;
 }
 
 //STYLE FOR APPLICATION.HTML.ERB
@@ -28,7 +14,7 @@ body{
   text-align:center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around;  
   align-items: baseline;
 }
 
@@ -38,6 +24,7 @@ body{
 
 .nav a{
     display:inline-block;
+    padding:2px 5px 8px;
     color:white;
     text-decoration: none;
     font-size: 18px;
@@ -45,7 +32,8 @@ body{
 }
 
 .logo{
-  width:320px;
+  width:350px;
+  padding:5px;
   margin:0 auto;
 }
 
@@ -67,14 +55,13 @@ body{
 .box{
   float:left;
   width:30%;
-  margin: 5% 0% 5% 8.5%;
+  margin: 5% 0% 5% 5%;
 }
 
 .preview-wrapper{
   width:40%;
   float:left;
   margin:5%;
-  margin-left: 3%;
 }
 
 // NEW CARD ENTRY - STYLE FOR EACH DIV
@@ -93,13 +80,17 @@ body{
 
 }
 
-.box input:not(#color_picker):not(#search_input), .box select, .box textarea {
+.content{
+  margin-top: 2%;
+}
+
+.box input, .box select, .box textarea {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: white;
   width: 100%;
   border: 0;
-  margin-bottom: 45px;
+  margin: 20px 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 18px;
@@ -112,8 +103,13 @@ body{
 }
 
 .prev, .next{
-  margin-top: 15px;
+  margin-top: 25px;
   background: #D96358;
+}
+
+.search_btn{
+  background-color: #FFCC33;
+  border-bottom: 3px solid #d55044;
 }
 
 .prev, .next, .search_btn{
@@ -121,15 +117,14 @@ body{
   text-transform: uppercase;
   outline: 0;
   width: 20%;
-  padding: 12px;
-  font-size: 18px;
+  border: 0;
+  padding: 15px;
+  font-size: 22px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
   border-radius: 4px;
   color:white;
-  letter-spacing: .15em;
-  border:0;
 }
 
 .prev{
@@ -142,39 +137,9 @@ body{
   border-bottom: 3px solid #e60000;
 }
 
-.search_btn{
-  background-color: #FFCC33;
-  border-bottom: 3px solid #ff9900;
-}
-
 
 .next:hover, .prev:hover, .search_btn:hover{
   background-color: #e38a82;
-}
-
-//SEND BUTTONS
-
-.send_btn{
-  font-family: roboto;
-  text-transform: uppercase;
-  outline: 0;
-  width: 20%;
-  padding: 12px;
-  font-size: 18px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-  border-radius: 4px;
-  color:white;
-  letter-spacing: .15em;
-  border:0;
-  margin-top:10px;
-}
-
-
-//PREVIEW WINDOW
-.preview_col{
-  border-radius: 3px;
 }
 
 ////TO AND FROM INPUTS
@@ -187,21 +152,13 @@ body{
 
 .search_wrapper{
   width:100%;
-  margin-bottom: 70px;
+  margin-bottom: 120px;
 }
 
 #search_input{
   width:73%;
   float:left;
   margin: 0px 0 15px;
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: white;
-  border: 0;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 18px;
-  border-radius: 0px;
 }
 
 .search_btn{
@@ -216,20 +173,16 @@ body{
 
 .input_col{
   height:350px;
-  padding:5px 7px;
-  background-color: black;
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  width: 100%;
-  border: 0;
-  box-sizing: border-box;
-  border-radius: 3px;
 }
 
 
 // MENU LAYOUT
-#m_user, #m_create {
-  height: 40px;
-  width: 40px;
-  margin-bottom: 25px;
+#m_user {
+  height: 50px;
+  width: 50px;
+}
+
+#m_create {
+  height: 50px;
+  width: 50px;
 }
