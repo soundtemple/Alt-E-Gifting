@@ -10,10 +10,16 @@
   background-color: white;
   padding:10px;
   box-sizing: border-box;
+  width:50%;
+  
+  /*width: 100px !important;*/
+  /*height: 500px !important;*/
 }
 
 .slick-slide{
   margin-left:10px;
+  /*width: 100px !important;
+  height: 100px !important;*/
 }
 
 
@@ -202,7 +208,7 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 8px;         /*was 6px*/
+    font-size: 15px;         /*was 6px*/
     line-height: 20px;
 
     position: absolute;
