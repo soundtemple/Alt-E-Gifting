@@ -66,11 +66,15 @@ class CardsController < ApplicationController
     end
   end
 
+  def send
+    # add send code here
+  end
+
   def destroy
     @card = Card.find_by(id: params[:id])
     @card.delete
     if @card.delete
-      redirect_to '/session' 
+      redirect_to '/session'
     else
       render template: "session"
     end
