@@ -21,7 +21,7 @@
             <%= form_tag "/cards/#{card.id}", method: 'delete' do %>
                 <button>DELETE</button>
             <% end %>
-            <%= form_tag "/cards/#{card.id}/send", method: 'post' do %>
+            <%= form_tag "/cards/#{card.id}/send", method: 'get' do %>
               <button>SEND</button>
             <% end %>
           </div>
@@ -67,6 +67,9 @@
 </div>
 
 <div class="info">
+  <%= form_tag "/logout", method: 'delete' do %>
+    <button>LOGOUT</button>
+  <% end %>
   <!--  return message from account creation-->
   <% if @errors %>
     <% @errors.each do |key, value| %>

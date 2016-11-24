@@ -66,12 +66,12 @@ class CardsController < ApplicationController
     end
   end
 
-
   def send_card
     @card = Card.find(params[:id])
-    # add send code here
-  end
+    CardMailer.send_card(current_user, @card).deliver
 
+    render :success
+  end
 
   def destroy
     @card = Card.find_by(id: params[:id])
@@ -87,4 +87,5 @@ class CardsController < ApplicationController
 
     render :success
   end
+
 end
