@@ -2,7 +2,12 @@
 <div class="session-account">
   <% if current_user %>
     <div class="session-saved-title">
-      <h1 class="saved-headings">SAVED CARDS</h1>
+      <div><h1 class="saved-headings">SAVED CARDS</h1></div>
+      <div>
+        <%= form_tag "/logout", method: 'delete' do %>
+          <button><h3><%= current_user.email %> LOGOUT</h3></button>
+        <% end %>
+      </div>
     </div>
     <div class="saved-cards-header" >
       <div class="cards-title"><h3>TITLE</h3></div>
