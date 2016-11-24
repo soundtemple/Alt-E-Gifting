@@ -42,6 +42,20 @@ $(document).ready(function() {
     $('.preview_col').css("background-color",$('.input_col').val());
   });
 
+  $('.category_select').change(function() {
+    $('.input_msg').empty();
+    var choice = favours[ $('.category_select').val() ]
+    for (var i = 0; i < choice.length; i++) {
+      $('.input_msg').append($("<option></option>").attr("value", choice[i]).text(choice[i]))
+    }
+    $( '.input_msg' ).trigger( "change" );
+
+
+
+  });
+
+
+
 
   // Code in bg_imgs.js
   // $('.your-class').click(function() {

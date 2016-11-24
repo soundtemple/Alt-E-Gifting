@@ -1,29 +1,42 @@
+<% @favours = Favour.all %>
+<% @categories = @favours.collect{ |f| f.category }.uniq %>
+<% @chosen_category = Favour.find_by( message: @card.message).category %>
 <div class="content">
 
   <div class="box initial">
     <!-- Title, Category, Message -->
 
     <!-- <label for="title">Title</label> -->
-    <p>STEP ONE</p>
+    <p class="headings">CHOOSE A GIFT</p>
     <select class="input_t" name="title">
       <% Title.all.each do |title| %>
-      <!-- <option value="" disabled selected>Choose a Title..</option> -->
-      <option value="<%= title.id %>"> <%= title.name %></option>
+        <% if title.id == @card.title_id %>
+          <option selected value="<%= title.id %>"> <%= title.name %></option>
+        <%else%>
+          <option value="<%= title.id %>"> <%= title.name %></option>
+        <% end %>
       <% end %>
     </select>
 
     <label for="category">Category</label>
-    <select name="category">
-      <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
+    <select class="category_select" name="category">
       <% @categories.each do |category| %>
-      <option value="<%= category %>"> <%= category %></option>
+        <% if category == @chosen_category %>
+          <option selected value="<%= category %>"> <%= category %></option>
+        <% else %>
+          <option value="<%= category %>"> <%= category %></option>
+        <% end %>
       <% end %>
     </select>
 
     <label for="message">Favour</label>
     <select class="input_msg" name="message">
       <% Favour.all.each do |favour| %>
-      <option value="<%= favour.message %>"> <%= favour.message %> </option>
+        <% if favour.category == @chosen_category && favour.message == @card.message %>
+          <option selected value="<%= favour.message %>"> <%= favour.message %> </option>
+        <% elsif favour.category == @chosen_category %>
+          <option value="<%= favour.message %>"> <%= favour.message %> </option>
+        <% end %>
       <% end %>
     </select>
     <!-- <input id="choice-editor"name="favour-input"> -->
@@ -33,6 +46,7 @@
 
 <div class="box">
     <!-- Search Image -->
+    <p class="headings">SEARCH IMAGES</p>
 
     <!-- SEARCH BOX -->
     <div class="search_wrapper">
@@ -41,7 +55,9 @@
     </div>
 
     <!-- CAROUSEL -->
-    <div class="image-results your-class"></div>
+    <div class="image-results your-class">
+
+    </div>
     <div class="space"></div>
 
     <button class="prev">Back</button>
@@ -49,10 +65,11 @@
   </div>
 
   <div class="box">
-    <p>STEP THREE</p>
+    <!-- <p>STEP THREE</p> -->
     <!-- Background Color Box with Preview -->
-    <label for="background_col">Background Colour</label>
-    <input class="input_col" type="color" name="background_col" value="<%= @card.background_col %>">
+    <!-- <label for="background_col">Background Colour</label> -->
+    <p class="headings">PICK A COLOUR</p>
+    <input id="color_picker" class="input_col" type="color" name="background_col" value="<%= @card.background_col %>">
 
 
     <button class="prev">Back</button>
@@ -60,7 +77,7 @@
   </div>
 
   <div class="box">
-    <p>STEP FOUR</p>
+    <p class="headings">REVIEW</p>
     <!-- Recipient Name, Email and Sign-off/Signature -->
 
     <!-- <label for="recipient_name">To</label> -->
@@ -73,6 +90,8 @@
     <input name="sign_off"  placeholder="Signature" value="<%= @card.sign_off %>">
 
     <button class="prev">Back</button>
+    <input type="submit" name="action" value="Save">
+    <input type="submit" name="action" value="Save and Send">
   </div>
 
 </div>
@@ -90,9 +109,18 @@
       </div>
       <div class="card-message preview_msg"><%= @card.message %></div>
     </div>
-
-
   </div>
-  <input type="submit" name="action" value="Save">
-  <input type="submit" name="action" value="Save and Send">
 </div>
+
+<!-- Stores the favours into an object so that when the category changes, the options for messages also changes -->
+<script type="text/javascript">
+  var favours = {
+    <% @categories.each do |category| %>
+    "<%=category%>": [],
+    <% end %>
+  }
+  <% @favours.each do |favour| %>
+  favours["<%= favour.category %>"].push( '<%= favour.message %>' );
+  <% end %>
+
+</script>
