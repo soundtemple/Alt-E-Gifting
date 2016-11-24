@@ -25,7 +25,7 @@ $(document).ready(function() {
     $main.hide();
     var $next = $($main.next('.box'));
     $next.show();
-  })
+  });
 
   $('.prev').click(function(e) {
     e.preventDefault();
@@ -34,7 +34,6 @@ $(document).ready(function() {
     $main.hide();
     var $prev = $($main.prev('.box'));
     $prev.show();
-  })
-
+  });
 
 })
