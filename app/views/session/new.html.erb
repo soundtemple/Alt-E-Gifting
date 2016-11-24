@@ -1,8 +1,10 @@
 
 <div class="session-account">
   <% if current_user %>
-    <h1 class="saved-headings">SAVED CARDS</h1>
-    <div class="saved-headings saved-cards-header" >
+    <div class="session-saved-title">
+      <h1 class="saved-headings">SAVED CARDS</h1>
+    </div>
+    <div class="saved-cards-header" >
       <div class="cards-title"><h3>TITLE</h3></div>
       <div class="cards-recipient"><h3>RECIPIENT</h3></div>
       <div class="actions"><h3>ACTIONS</h3></div>
@@ -70,18 +72,6 @@
     <% @errors.each do |key, value| %>
       <p class="message" id="<%= @type %>">
       <%= key.to_s.upcase + " " + value.to_s %></p>
-    <% end %>
-  <% end %>
-</div>
-
-
-<div class="session-logout">
-  <% if logged_in? %>
-    <p>Logged in as <%= current_user.email %></p>
-    <%= form_tag '/logout', method: 'delete' do %>
-      <div class="session-buttons">
-        <button>LOGOUT <%= current_user.email %></button>
-      </div>
     <% end %>
   <% end %>
 </div>
