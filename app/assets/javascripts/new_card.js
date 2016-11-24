@@ -42,8 +42,10 @@ $(document).ready(function() {
     $('.preview_col').css("background-color",$('.input_col').val());
   });
 
-  $('.input_img').change(function() {
-    $('.preview_img').attr("src",($('.input_img').attr("src")));
-  });
+
+  // Code in bg_imgs.js
+  // $('.your-class').click(function() {
+  //   $('.preview_img').attr("src",($().attr("src")));
+  // });
 
 })
