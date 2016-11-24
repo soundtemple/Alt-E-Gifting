@@ -33,13 +33,19 @@ img:hover {
 .your-class img{
   width: 100px;
   height: 75px;
-  border-right: 3px solid white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  margin: 0;
 }
 
 .your-class{
-  background-color: white;
+  background-color:#e1e8f0;
   overflow: scroll;
-  height:380px;
+  height:315px;
+  padding:15px 0px;
+  width: 100%;
 }
 
 #image{
