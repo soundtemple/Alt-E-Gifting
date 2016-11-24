@@ -66,9 +66,12 @@ class CardsController < ApplicationController
     end
   end
 
-  def send
+
+  def send_card
+    @card = Card.find(params[:id])
     # add send code here
   end
+
 
   def destroy
     @card = Card.find_by(id: params[:id])

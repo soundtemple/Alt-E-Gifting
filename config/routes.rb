@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   patch '/cards/:id', to: 'cards#update'
 
   get '/cards/:id/show', to: 'cards#show'
-  get '/cards/:id/send', to: 'cards#send'
+  post '/cards/:id/send', to: 'cards#send_card'
 
 
   # delete card
