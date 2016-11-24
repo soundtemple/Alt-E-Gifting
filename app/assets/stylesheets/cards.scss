@@ -2,7 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+  font-family: "Bebas";
+  src: font-url('assets/fonts/BebasNeue.otf') format('opentype');
+}
 
+@font-face {
+  font-family: "bodoni";
+  src: font-url('assets/fonts/Bodoni.ttc') format('truetype');
+}
 
 .background_col {
   width:700px;
@@ -34,7 +42,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
 }
 
@@ -43,9 +50,10 @@
   font-weight: bold;
   color: white;
   text-shadow: 5px 5px black;
+  font-family: bebas;
 }
 
 .card-message {
   font-size: 2em;
-  text-shadow: 1px 1px black;
+  font-family: bodoni;
 }
