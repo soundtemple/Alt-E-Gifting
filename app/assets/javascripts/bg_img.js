@@ -78,7 +78,7 @@ function displayImages(pixabayResults){
     //  dots: true,
     //  infinite: true,
     //  speed: 300,
-     slidesToShow: 5,
+     slidesToShow: 3,
     //  centerMode: true,
     //  variableWidth: true
    });

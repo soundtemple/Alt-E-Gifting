@@ -20,6 +20,11 @@ img:hover {
   cursor: pointer;
 }
 
+.preview_img{
+  max-width: 650px;
+  overflow: hidden;
+}
+
 @font-face {
     font-family:bebas;
     src: url(BebasNeue.otf);
@@ -32,7 +37,6 @@ img:hover {
 
 .your-class{
   background-color: gray;
-  margin-top:40px;
 }
 
 #image{
