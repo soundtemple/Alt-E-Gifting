@@ -67,12 +67,16 @@ function displayImages(pixabayResults){
 
   //puts the images in the slider
   $('.your-class').slick({
-     dots: true,
-     infinite: true,
-     speed: 300,
-     slidesToShow: 1,
-     centerMode: true,
-     variableWidth: true
+    autoPlay:true,
+    dots: false,
+    arrows: true,
+    vertical: true,
+    //  dots: true,
+    //  infinite: true,
+    //  speed: 300,
+     slidesToShow: 5,
+    //  centerMode: true,
+    //  variableWidth: true
    });
 };
 

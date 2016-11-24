@@ -2,27 +2,30 @@
 
   <div class="box initial">
     <!-- To and From fields. -->
-    <label for="title">Title</label>
+    <!-- <label for="title">Title</label> -->
+    <p>STEP ONE</p>
     <select class="input_t" name="title">
       <% Title.all.each do |title| %>
+      <!-- <option value="" disabled selected>Choose a Title..</option> -->
       <option value="<%= title.id %>"> <%= title.name %></option>
       <% end %>
     </select>
 
-    <label for="recipient_name">To</label>
-    <input class="input_rn" name="recipient_name">
+    <!-- <label for="recipient_name">To</label> -->
+    <input class="input_rn" name="recipient_name" placeholder="To">
 
-    <label for="recipient_email">Email</label>
-    <input name="recipient_email">
+    <!-- <label for="recipient_email">Email</label> -->
+    <input name="recipient_email" placeholder="Email">
 
-    <label for="sign_off">From</label>
-    <input class="input_so" name="sign_off">
+    <!-- <label for="sign_off">From</label> -->
+    <input class="input_so" name="sign_off"  placeholder="Signature">
 
     <button class="next">Next</button>
   </div>
 
   <div class="box">
     <!-- Category and Message Box -->
+    <p>STEP TWO</p>
     <label for="category">Category</label>
     <select name="category">
       <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
@@ -44,6 +47,7 @@
   </div>
 
   <div class="box">
+    <p>STEP THREE</p>
     <!-- Background Color Box with Preview -->
     <label for="background_col">Background Colour</label>
     <input class="input_col" type="color" name="background_col" value="<%= @card.background_col %>">
@@ -55,13 +59,17 @@
 
 
 <div class="box">
-    <!-- SEARCH BOX -->
-    <input type="input" id="search_input" placeholder="categorysearch" value="">
-    <button class="search_btn">SEARCH</button>
+    <p>STEP FOUR</p>
 
     <!-- SELECTED IMAGE  -->
     <div class="container">
         <div class="chosen-image"><img class="input_img" src=""/></div>
+    </div>
+
+    <!-- SEARCH BOX -->
+    <div class="search_wrapper">
+      <input type="input" id="search_input" placeholder="Find an image.." value="">
+      <button class="search_btn">SEARCH</button>
     </div>
 
     <!-- CAROUSEL -->
@@ -75,6 +83,7 @@
 
 
   <div class="box">
+    <p>REVIEW</p>
     <!-- Preview Box -->
     <div class="preview">
       <div  class="background_col preview_col">
