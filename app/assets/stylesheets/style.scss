@@ -13,8 +13,10 @@ body{
   text-align: left;
   color:black;
   margin-bottom: 5px;
-  font-size: 40px;
-  font-family: bebas;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  // text-shadow: 5px 5px black;
 }
 
 //STYLE FOR APPLICATION.HTML.ERB
@@ -94,7 +96,7 @@ body{
 }
 
 .box input:not(#color_picker):not(#search_input), .box select, .box textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Oswald', sans-serif;
   outline: 0;
   background: white;
   width: 100%;
@@ -104,11 +106,12 @@ body{
   box-sizing: border-box;
   font-size: 18px;
   border-radius: 0px;
+  font-weight: 300;
 }
 
 .box label{
   text-align: left;
-  font-family: roboto;
+  font-family: 'Oswald', sans-serif;
 }
 
 .prev, .next{
@@ -120,9 +123,9 @@ body{
   font-family: roboto;
   text-transform: uppercase;
   outline: 0;
-  width: 20%;
+  width: 100px;
   padding: 12px;
-  font-size: 18px;
+  font-size: 17px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
