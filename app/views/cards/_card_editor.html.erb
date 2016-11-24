@@ -1,3 +1,6 @@
+<% @favours = Favour.all %>
+<% @categories = @favours.collect{ |f| f.category }.uniq %>
+<% @chosen_category = Favour.find_by( message: @card.message).category %>
 <div class="content">
 
   <div class="box initial">
@@ -8,22 +11,33 @@
     <select class="input_t" name="title">
       <% Title.all.each do |title| %>
       <!-- <option value="" disabled selected>Choose a Title..</option> -->
-      <option value="<%= title.id %>"> <%= title.name %></option>
+        <% if title.id == @card.title_id %>
+          <option selected value="<%= title.id %>"> <%= title.name %></option>
+        <%else%>
+          <option value="<%= title.id %>"> <%= title.name %></option>
+        <% end %>
       <% end %>
     </select>
 
     <label for="category">Category</label>
-    <select name="category">
-      <% @categories = Favour.all.collect{ |f| f.category }.uniq %>
+    <select class="category_select" name="category">
       <% @categories.each do |category| %>
-      <option value="<%= category %>"> <%= category %></option>
+        <% if category == @chosen_category %>
+          <option selected value="<%= category %>"> <%= category %></option>
+        <% else %>
+          <option value="<%= category %>"> <%= category %></option>
+        <% end %>
       <% end %>
     </select>
 
     <label for="message">Favour</label>
     <select class="input_msg" name="message">
       <% Favour.all.each do |favour| %>
-      <option value="<%= favour.message %>"> <%= favour.message %> </option>
+        <% if favour.category == @chosen_category && favour.message == @card.message %>
+          <option selected value="<%= favour.message %>"> <%= favour.message %> </option>
+        <% elsif favour.category == @chosen_category %>
+          <option value="<%= favour.message %>"> <%= favour.message %> </option>
+        <% end %>
       <% end %>
     </select>
     <!-- <input id="choice-editor"name="favour-input"> -->
@@ -77,6 +91,8 @@
     <input name="sign_off"  placeholder="Signature" value="<%= @card.sign_off %>">
 
     <button class="prev">Back</button>
+    <input type="submit" name="action" value="Save">
+    <input type="submit" name="action" value="Save and Send">
   </div>
 
 </div>
@@ -94,9 +110,18 @@
       </div>
       <div class="card-message preview_msg"><%= @card.message %></div>
     </div>
-
-
   </div>
-  <input class="send_btn" type="submit" name="action" value="Save">
-  <input type="submit" class="send_btn" name="action" value="Save and Send">
 </div>
+
+<!-- Stores the favours into an object so that when the category changes, the options for messages also changes -->
+<script type="text/javascript">
+  var favours = {
+    <% @categories.each do |category| %>
+    "<%=category%>": [],
+    <% end %>
+  }
+  <% @favours.each do |favour| %>
+  favours["<%= favour.category %>"].push( '<%= favour.message %>' );
+  <% end %>
+
+</script>
