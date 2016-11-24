@@ -44,11 +44,26 @@ body{
   margin-left:100px;
 }
 
+.content{
+  width:100%;
+}
+
+.box{
+  float:left;
+  width:30%;
+  margin: 5% 0% 5% 5%;
+}
+
+.preview-wrapper{
+  width:40%;
+  float:left;
+  margin:5%;
+}
+
 // NEW CARD ENTRY - STYLE FOR EACH DIV
 
 .box{
   max-width:750px;
-  margin:0 auto;
   text-align: center;
   height:100%;
 }
@@ -62,7 +77,7 @@ body{
 }
 
 .content{
-  margin-top: 70px;
+  margin-top: 2%;
 }
 
 .box input, .box select, .box textarea {
@@ -90,6 +105,7 @@ body{
 
 .search_btn{
   background-color: #FFCC33;
+  border-bottom: 3px solid #d55044;
 }
 
 .prev, .next, .search_btn{
@@ -105,15 +121,16 @@ body{
   cursor: pointer;
   border-radius: 4px;
   color:white;
-    border-bottom: 3px solid #d55044;
 }
 
 .prev{
   float:left;
+  border-bottom: 3px solid #e60000;
 }
 
 .next{
   float:right;
+  border-bottom: 3px solid #e60000;
 }
 
 
@@ -132,7 +149,6 @@ body{
 .search_wrapper{
   width:100%;
   margin-bottom: 120px;
-  margin-top: 50px;
 }
 
 #search_input{
