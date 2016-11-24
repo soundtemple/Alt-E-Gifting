@@ -31,7 +31,7 @@ $(document).ready(function() {
   });
 
   $('.input_t').change(function() {
-    $('.preview_t').text($('.input_t').text());
+    $('.preview_t').text($('.input_t option:selected').text());
   });
 
   $('.input_msg').change(function() {
