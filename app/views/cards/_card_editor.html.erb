@@ -7,7 +7,7 @@
     <!-- Title, Category, Message -->
 
     <!-- <label for="title">Title</label> -->
-    <p>STEP ONE</p>
+    <p class="headings">CHOOSE A GIFT</p>
     <select class="input_t" name="title">
       <% Title.all.each do |title| %>
       <!-- <option value="" disabled selected>Choose a Title..</option> -->
@@ -47,6 +47,7 @@
 
 <div class="box">
     <!-- Search Image -->
+    <p class="headings">SEARCH IMAGES</p>
 
     <!-- SEARCH BOX -->
     <div class="search_wrapper">
@@ -55,7 +56,9 @@
     </div>
 
     <!-- CAROUSEL -->
-    <div class="image-results your-class"></div>
+    <div class="image-results your-class">
+
+    </div>
     <div class="space"></div>
 
     <button class="prev">Back</button>
@@ -63,10 +66,11 @@
   </div>
 
   <div class="box">
-    <p>STEP THREE</p>
+    <!-- <p>STEP THREE</p> -->
     <!-- Background Color Box with Preview -->
-    <label for="background_col">Background Colour</label>
-    <input class="input_col" type="color" name="background_col" value="<%= @card.background_col %>">
+    <!-- <label for="background_col">Background Colour</label> -->
+    <p class="headings">PICK A COLOUR</p>
+    <input id="color_picker" class="input_col" type="color" name="background_col" value="<%= @card.background_col %>">
 
 
     <button class="prev">Back</button>
@@ -74,7 +78,7 @@
   </div>
 
   <div class="box">
-    <p>STEP FOUR</p>
+    <p class="headings">REVIEW</p>
     <!-- Recipient Name, Email and Sign-off/Signature -->
 
     <!-- <label for="recipient_name">To</label> -->
