@@ -7,11 +7,13 @@ img:hover {
 }
 
 .chosen-image {
-  width: 640px;
-  height: 480px;
+  width: 450px;
+  height: 50%;
   background-color: white;
-  padding:20px;
+  padding:15px;
   padding-bottom: 100px;
+  clear:both;
+  margin:0 auto;
 }
 
 .chosen-image:hover {
