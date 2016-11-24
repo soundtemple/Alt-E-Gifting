@@ -12,8 +12,6 @@ body{
   margin:0;
   padding:0;
   text-align:center;
-  // border-bottom:3px solid #00281f;
-  // FDBA16
 }
 
 .nav li{
@@ -32,6 +30,7 @@ body{
 .logo{
   width:350px;
   padding:5px;
+  margin:0 auto;
 }
 
 #nav-new-card{
@@ -45,27 +44,13 @@ body{
   margin-left:100px;
 }
 
-// footer{
-//   background-color: #47C1C2;
-//   color:white;
-//   bottom: 0;
-//   width:100%;
-//   padding:15px;
-//   border-top: 2px solid white;
-//   position:fixed;
-//   margin-top: 150 px;
-// }
-
 // NEW CARD ENTRY - STYLE FOR EACH DIV
 
 .box{
   max-width:750px;
   margin:0 auto;
   text-align: center;
-}
-
-.space{
-  height:50px;
+  height:100%;
 }
 
 .prev{
@@ -100,53 +85,67 @@ body{
 
 .prev, .next{
   margin-top: 25px;
+  background: #D96358;
+}
+
+.search_btn{
+  background-color: #FFCC33;
+}
+
+.prev, .next, .search_btn{
+  font-family: roboto;
+  text-transform: uppercase;
+  outline: 0;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  font-size: 22px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 4px;
+  color:white;
+    border-bottom: 3px solid #d55044;
 }
 
 .prev{
-  font-family: roboto;
-  text-transform: uppercase;
-  outline: 0;
-  background: #D96358;
-  width: 20%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 22px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
   float:left;
-  border-radius: 4px;
-  border-bottom: 3px solid #d55044;
 }
 
 .next{
-  font-family: roboto;
-  text-transform: uppercase;
-  outline: 0;
-  background: #D96358;
-  width: 20%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 22px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
   float:right;
-  border-radius: 4px;
-  border-bottom: 3px solid #d55044;
 }
 
 
-.next:hover {
+.next:hover, .prev:hover, .search_btn:hover{
   background-color: #e38a82;
 }
 
-.button:active{
-  background-color: #e38a82;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+////TO AND FROM INPUTS
+
+.box select{
+  height:40px;
+}
+
+////SEARCH IMAGE INPUTS
+
+.search_wrapper{
+  width:100%;
+  margin-bottom: 120px;
+  margin-top: 50px;
+}
+
+#search_input{
+  width:73%;
+  float:left;
+  margin: 0px 0 15px;
+}
+
+.search_btn{
+  float:right;
+  width:25%;
+  padding:14px;
+  font-size: 15px;
 }
 
 
