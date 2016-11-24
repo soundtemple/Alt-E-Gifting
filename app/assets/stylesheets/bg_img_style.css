@@ -21,8 +21,9 @@ img:hover {
 }
 
 .preview_img{
-  max-width: 650px;
   overflow: hidden;
+  width: 650px;
+  height: 500px;
 }
 
 @font-face {
