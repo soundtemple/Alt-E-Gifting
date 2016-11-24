@@ -10,7 +10,6 @@
     <p class="headings">CHOOSE A GIFT</p>
     <select class="input_t" name="title">
       <% Title.all.each do |title| %>
-      <!-- <option value="" disabled selected>Choose a Title..</option> -->
         <% if title.id == @card.title_id %>
           <option selected value="<%= title.id %>"> <%= title.name %></option>
         <%else%>
