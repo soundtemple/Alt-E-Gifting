@@ -25,7 +25,7 @@ $(document).ready(function() {
     searchRequest = $('#search_input').val();
     imageRequest = endPointUrl + searchRequest;
     // empty results div for new search
-    $('.image-results').empty();
+    // $('.image-results').empty();
     // empty search field to prevent multiple request
     $('#search_input').val('');
     // get_movies(movie_requested);
@@ -61,7 +61,11 @@ function displayImages(pixabayResults){
     console.log($(this).attr('src'));
     cardImage = $(this).attr('src')
 
-    $('.chosen-image img').attr('src', cardImage)
+    // changes image of preview image and adds it to the hidden input field
+    $('.preview_img').attr("src",($(this).attr("src")));
+    $('.preview_img_name').val($(this).attr("src"));
+
+    // $('.chosen-image img').attr('src', cardImage)
     });
   }
 
