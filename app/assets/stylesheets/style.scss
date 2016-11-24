@@ -59,7 +59,7 @@ body{
 // NEW CARD ENTRY - STYLE FOR EACH DIV
 
 .box{
-  max-width:800px;
+  max-width:750px;
   margin:0 auto;
   text-align: center;
 }
@@ -86,7 +86,7 @@ body{
   background: white;
   width: 100%;
   border: 0;
-  margin: 25px 0 15px;
+  margin: 20px 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 18px;
@@ -147,4 +147,11 @@ body{
   background-color: #e38a82;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+
+///////BACKGROUND COLOR
+
+.input_col{
+  height:350px;
 }
