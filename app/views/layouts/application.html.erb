@@ -6,13 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
   </head>
 
   <body>
     <nav>
       <ul class="nav">
 
-        <li><a href="/cards" onclick="location.reload()"><img src="menu_create.png" alt="alt-e gifts" id="m_create"></a></li>
+        <form id="new_card_button" action="/cards" method="get">
+          <img src="menu_create.png" alt="alt-e gifts" id="m_create" onclick="$('#new_card_button').submit();">
+        </form>
+
         <li><a href="/"><img src="logo4.png" alt="alt-e gifts" class="logo"></a></li>
         <li><a href="/session"><img src="menu_user.png" alt="alt-e gifts" id="m_user"></a></li>
 

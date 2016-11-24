@@ -3,6 +3,19 @@ body{
   background-color: #E6F4F6;
 }
 
+<<<<<<< HEAD
+=======
+.headings{
+  text-align: left;
+  color:black;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  // text-shadow: 5px 5px black;
+}
+
+>>>>>>> 9b5e362e9801c978d05b8c683b2d3d7534e176b2
 //STYLE FOR APPLICATION.HTML.ERB
 
 .nav{
@@ -14,7 +27,7 @@ body{
   text-align:center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;  
+  justify-content: space-around;
   align-items: baseline;
 }
 
@@ -80,12 +93,11 @@ body{
 
 }
 
-.content{
-  margin-top: 2%;
-}
 
-.box input, .box select, .box textarea {
-  font-family: "Roboto", sans-serif;
+
+
+.box input:not(#color_picker):not(#search_input), .box select, .box textarea {
+  font-family: 'Oswald', sans-serif;
   outline: 0;
   background: white;
   width: 100%;
@@ -95,11 +107,12 @@ body{
   box-sizing: border-box;
   font-size: 18px;
   border-radius: 0px;
+  font-weight: 300;
 }
 
 .box label{
   text-align: left;
-  font-family: roboto;
+  font-family: 'Oswald', sans-serif;
 }
 
 .prev, .next{
@@ -116,10 +129,16 @@ body{
   font-family: roboto;
   text-transform: uppercase;
   outline: 0;
+<<<<<<< HEAD
   width: 20%;
   border: 0;
   padding: 15px;
   font-size: 22px;
+=======
+  width: 100px;
+  padding: 12px;
+  font-size: 17px;
+>>>>>>> 9b5e362e9801c978d05b8c683b2d3d7534e176b2
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
