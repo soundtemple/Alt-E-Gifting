@@ -13,12 +13,6 @@ $(document).ready(function() {
     e.preventDefault();
 
     // changes the preview to be equal to the input
-    $('.preview_t').text($('.input_t').text());
-    $('.preview_rn').text($('.input_rn').val());
-    $('.preview_so').text($('.input_so').val());
-    $('.preview_msg').text($('.input_msg').val());
-    $('.preview_col').css("background-color",$('.input_col').val());
-    $('.preview_img').attr("src",($('.input_img').attr("src")));
 
 
     var $main = $($(this).closest(".box"));
@@ -34,6 +28,30 @@ $(document).ready(function() {
     $main.hide();
     var $prev = $($main.prev('.box'));
     $prev.show();
+  });
+
+  $('.input_t').change(function() {
+    $('.preview_t').text($('.input_t').text());
+  });
+
+  $('.input_rn').change(function() {
+    $('.preview_rn').text($('.input_rn').val());
+  });
+
+  $('.input_so').change(function() {
+    $('.preview_so').text($('.input_so').val());
+  });
+
+  $('.input_msg').change(function() {
+    $('.preview_msg').text($('.input_msg').val());
+  });
+
+  $('.input_col').change(function() {
+    $('.preview_col').css("background-color",$('.input_col').val());
+  });
+
+  $('.input_img').change(function() {
+    $('.preview_img').attr("src",($('.input_img').attr("src")));
   });
 
 })
