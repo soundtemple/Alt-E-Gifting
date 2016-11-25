@@ -96,7 +96,7 @@ body{
 }
 
 .box input:not(#color_picker):not(#search_input), .box select, .box textarea {
-  font-family: 'Oswald', sans-serif;
+  font-family: roboto;
   outline: 0;
   background: white;
   width: 100%;
@@ -110,8 +110,13 @@ body{
 }
 
 .box label{
-  text-align: left;
   font-family: 'Oswald', sans-serif;
+  width: 100%;
+  display: block;
+  text-align: left;
+  letter-spacing: .03em;
+  margin-bottom: 8px;
+  font-size: 28px;
 }
 
 .prev, .next{
@@ -205,6 +210,7 @@ body{
   box-sizing: border-box;
   font-size: 18px;
   border-radius: 0px;
+  font-weight: 300;
 }
 
 .search_btn{
