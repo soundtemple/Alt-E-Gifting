@@ -264,6 +264,18 @@ form:hover .hover_text_card {
   font-family: 'Oswald', sans-serif;
 }
 
+.home-pages-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.home-pages-images img {
+  width: 40%;
+  height: 40%;
+  margin: 5%;
+}
+
 .search_btn{
   float:right;
   width: 100px;
