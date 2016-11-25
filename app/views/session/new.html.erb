@@ -5,7 +5,7 @@
       <div><h1 class="saved-headings">SAVED CARDS</h1></div>
       <div>
         <%= form_tag "/logout", method: 'delete' do %>
-          <button><h3><%= current_user.email %> LOGOUT</h3></button>
+          <button class="session-buttons" id="session-user-btn"><h3><%= current_user.email %> LOGOUT</h3></button>
         <% end %>
       </div>
     </div>
@@ -21,13 +21,13 @@
           <div class="saved-recipient"><p><%= card.recipient_name %></p></div>
           <div class="session-btn-options">
             <%= form_tag "/cards/#{card.id}/edit", method: 'get' do %>
-              <button>EDIT</button>
+              <button class="session-buttons" id="session-edit-btn">EDIT</button>
             <% end %>
             <%= form_tag "/cards/#{card.id}", method: 'delete' do %>
-                <button>DELETE</button>
+                <button button class="session-buttons" id="session-delete-btn">DELETE</button>
             <% end %>
             <%= form_tag "/cards/#{card.id}/send", method: 'get' do %>
-              <button>SEND</button>
+              <button button class="session-buttons"id="session-send-btn">SEND</button>
             <% end %>
           </div>
         </div>
@@ -46,8 +46,8 @@
           <input type="input" placeholder="email"name="email" value="">
           <input type="password" placeholder="password" name="password" value="">
         </div>
-        <div class="session-buttons">
-          <button>LOGIN</button>
+        <div >
+          <button class="session-buttons" id="login-signup-btn">LOGIN</button>
         </div>
       <% end %>
     <% end %>
@@ -62,8 +62,8 @@
           <input type="password" placeholder="password" name="password" value="">
           <input type="password" placeholder="confirm password" name="password_confirmation" value="">
         </div>
-        <div class="session-buttons">
-          <button>SIGN UP</button>
+        <div>
+          <button class="session-buttons" id="login-signup-btn">SIGN UP</button>
         </div>
       <% end %>
     <% end %>
@@ -72,9 +72,6 @@
 </div>
 
 <div class="info">
-  <%= form_tag "/logout", method: 'delete' do %>
-    <button>LOGOUT</button>
-  <% end %>
   <!--  return message from account creation-->
   <% if @errors %>
     <% @errors.each do |key, value| %>
