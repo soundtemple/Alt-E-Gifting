@@ -39,7 +39,7 @@
 
   <div class="session-left-box">
     <% if !logged_in? %>
-      <h2>LOGIN</h2>
+      <h2 class="saved-headings">LOGIN</h2>
       <%= form_tag '/session', method: 'post' do %>
         <div class="session-inputs">
           <input type="input" placeholder="email"name="email" value="">
@@ -55,7 +55,7 @@
   <div class="session-right-box">
     <% if !logged_in? %>
       <%= form_tag '/session/new_user', method: 'post' do %>
-        <h2>SIGN UP</h2>
+        <h2 class="saved-headings" >SIGN UP</h2>
         <div class="session-inputs">
           <input type="input" placeholder="email" name="email" value="">
           <input type="password" placeholder="password" name="password" value="">
