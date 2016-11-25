@@ -94,7 +94,7 @@ body{
 
 
 .box input:not(#color_picker):not(#search_input), .box select, .box textarea {
-  font-family: 'Oswald', sans-serif;
+  font-family: roboto;
   outline: 0;
   background: white;
   width: 100%;
@@ -108,8 +108,13 @@ body{
 }
 
 .box label{
-  text-align: left;
   font-family: 'Oswald', sans-serif;
+  width: 100%;
+  display: block;
+  text-align: left;
+  letter-spacing: .03em;
+  margin-bottom: 8px;
+  font-size: 28px;
 }
 
 .prev, .next{
@@ -169,6 +174,15 @@ body{
   width:73%;
   float:left;
   margin: 0px 0 15px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: white;
+  border: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 0px;
+  font-weight: 300;
 }
 
 .search_btn{
