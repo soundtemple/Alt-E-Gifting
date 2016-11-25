@@ -77,21 +77,22 @@
   </div>
 
   <div class="box">
-    <p class="headings">REVIEW</p>
+    <p class="headings">TO</p>
     <!-- Recipient Name, Email and Sign-off/Signature -->
 
-    <!-- <label for="recipient_name">To</label> -->
-    <input name="recipient_name" placeholder="To" value="<%= @card.recipient_name %>">
+    <input name="recipient_name" placeholder="Recipient name" value="<%= @card.recipient_name %>">
 
-    <!-- <label for="recipient_email">Email</label> -->
-    <input name="recipient_email" placeholder="Email" value="<%= @card.recipient_email %>">
+    <label for="recipient_email">EMAIL</label>
+    <input name="recipient_email" placeholder="Recipient email" value="<%= @card.recipient_email %>">
 
-    <!-- <label for="sign_off">From</label> -->
+    <label for="sign_off">FROM</label>
     <input name="sign_off"  placeholder="Signature" value="<%= @card.sign_off %>">
 
-    <button class="prev">Back</button>
-    <input type="submit" name="save_choice" value="Save">
-    <input type="submit" name="save_choice" value="Save and Send">
+    <div class="btn_wrapper">
+      <button class="prev">Back</button>
+        <input class="save_send_btn" type="submit" name="save_choice" value="Save &amp; Send">
+      <input class="send_btn" type="submit" name="save_choice" value="Save">
+    </div>
   </div>
 
 </div>
