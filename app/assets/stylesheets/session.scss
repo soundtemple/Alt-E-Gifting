@@ -22,16 +22,27 @@
   border-bottom: 1px solid #42c1c2;
 }
 
+.saved-card p{
+  color:#707070;
+}
+
 .saved-card-list {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .saved-headings {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  color:#424242;
+
 }
 
 .session-saved-title {
@@ -105,16 +116,16 @@
 }
 
 #session-delete-btn {
-  background-color: #D96358;
-  border-bottom: 3px solid #e60000;
+  background: #ea4859;
+  border-bottom: 3px solid #b71526;
   font-size: 12px;
   letter-spacing: .15em;
   padding: 12px;
 }
 
 #session-edit-btn {
-  background-color: #FFCC33;
-  border-bottom: 3px solid #ffeb3b;
+  background-color: #f2dc37;
+  border-bottom: 3px solid #FFCC33;
   font-size: 12px;
   letter-spacing: .15em;
   padding: 12px;
@@ -122,7 +133,7 @@
 
 #session-send-btn {
   background-color: #66ab69;
-  border-bottom: 3px solid #4caf50;
+  border-bottom: 3px solid green;
   font-size: 12px;
   letter-spacing: .15em;
   padding: 12px;
@@ -130,12 +141,12 @@
 
 
 #session-delete-btn:hover {
-  background-color: #e38a82;
+  background-color: #e62739;
   cursor: pointer;
 }
 
 #session-edit-btn:hover {
-  background-color: #f1da96;
+background-color: #fdba44;
   cursor: pointer;
 }
 
@@ -151,6 +162,7 @@
   font-size: 12px;
   letter-spacing: .15em;
   padding: 12px;
+  color:white;
 }
 
 
@@ -158,8 +170,6 @@
   background-color: #bed1d1;
   cursor: pointer;
 }
-
-
 
 
 #login-signup-btn {
@@ -216,6 +226,14 @@ textarea:focus, input:focus{
 }
 
 
-h1, h2, h3, p {
+h1, h2, p {
   color: #47c1c2;
+  font-family: roboto;
+}
+
+
+h3{
+  color:#424242;
+  font-family: roboto;
+  letter-spacing: .07em;
 }

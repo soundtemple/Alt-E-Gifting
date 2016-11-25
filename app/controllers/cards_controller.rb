@@ -16,7 +16,7 @@ class CardsController < ApplicationController
     @card.sign_off = ""
     @card.message = Favour.first.message
     @card.background_img = ""
-    @card.background_col = "white"
+    @card.background_col = "#e1e8f0"
 
   end
 

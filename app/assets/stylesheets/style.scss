@@ -33,21 +33,25 @@ body{
 }
 
 .menu-icon-acc {
-  margin-top: 55px;
+  margin-top: 30px;
+  width:100px;
 }
 
 .menu-icon-card {
-  margin-top: 60px;
+  margin-top: 35px;
+  width:100px;
 }
 
 li:hover .hover_text_acc {
   visibility: visible;
   color: rgba(255, 255, 255, .6);
+  font-family: roboto;
 }
 
 form:hover .hover_text_card {
   visibility: visible;
   color: rgba(255, 255, 255, .6);
+  font-family: roboto;
 }
 
 .nav li{
@@ -65,7 +69,6 @@ form:hover .hover_text_card {
 
 .logo{
   width:300px;
-  padding:5px;
   margin:0 auto;
 }
 
@@ -95,13 +98,13 @@ form:hover .hover_text_card {
 .box{
   float:left;
   width:30%;
-  margin: 5% 0% 5% 5%;
+  margin: 3% 0% 5% 5%;
 }
 
 .preview-wrapper{
   width:40%;
   float:left;
-  margin:5%;
+  margin:3% 5% 5% 5%;
 }
 
 .btn_wrapper{
@@ -178,8 +181,8 @@ form:hover .hover_text_card {
 }
 
 .search_btn{
-  background-color: #FFCC33;
-  border-bottom: 3px solid #d55044;
+  background-color: #f2dc37;
+  border-bottom: 3px solid #FFCC33;
 }
 
 .prev, .next, .search_btn{
@@ -246,7 +249,7 @@ form:hover .hover_text_card {
   width:25%;
   padding:15px;
   font-size: 15px;
-  border-bottom: 3px solid #ffeb3b;
+  border-bottom: 3px solid #FFCC33;
 }
 
 .search_btn:hover{
