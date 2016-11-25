@@ -244,9 +244,17 @@ form:hover .hover_text_card {
   font-weight: 300;
 }
 
+.success-message {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #707070;
+}
+
 .search_btn{
   float:right;
-  width:25%;
+  width: 100px;
   padding:15px;
   font-size: 15px;
   border-bottom: 3px solid #FFCC33;
