@@ -69,6 +69,14 @@ form:hover .hover_text_card {
   margin:0 auto;
 }
 
+.show-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
 #nav-new-card{
   text-align: left;
   margin-right:50px;
