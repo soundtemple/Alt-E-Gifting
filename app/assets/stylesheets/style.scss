@@ -25,7 +25,29 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: stretch;
+}
+
+.nav .hover_text {
+  visibility: hidden;
+}
+
+.menu-icon-acc {
+  margin-top: 55px;
+}
+
+.menu-icon-card {
+  margin-top: 60px;
+}
+
+li:hover .hover_text_acc {
+  visibility: visible;
+  color: rgba(255, 255, 255, .6);
+}
+
+form:hover .hover_text_card {
+  visibility: visible;
+  color: rgba(255, 255, 255, .6);
 }
 
 .nav li{
