@@ -187,12 +187,12 @@ body{
 
 
 // MENU LAYOUT
-#m_user {
-  height: 50px;
-  width: 50px;
+#m_user, #m_create {
+  font-size: 50px;
+  color: rgba(255, 255, 255, .75);
+  cursor: pointer;
 }
 
-#m_create {
-  height: 50px;
-  width: 50px;
+#m_user:hover, #m_create:hover {
+  color: rgba(255, 255, 255, 1);
 }
