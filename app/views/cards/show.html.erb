@@ -1,13 +1,14 @@
-
-<div  style="background-color:<%= @card.background_col %>" class="background_col">
-  <div class="background_img">
-    <img height="400" width="600" src="<%= @card.background_img %>" />
-    <div class="card-text">
-      <div class="recipient_name"><%= @card.recipient_name %></div>
-      <div class="card-title"><%= (Title.find(@card.title_id)).name %></div>
-      <div class="card-message"><%= @card.message %></div>
+<div class="show-page-wrapper">
+  <div class="show-page-preview">
+    <div  class="background_col preview_col" style="background-color:<%= @card.background_col %>">
+      <div class="background_img">
+        <img height="400" width="600" class="preview_img" src="<%= @card.background_img %>"/>
+        <input type="hidden" class="preview_img_name" name="background_img" value="<%= @card.background_img %>">
+        <div class="card-text">
+          <div class="card-title preview_t"><%= (Title.find(@card.title_id)).name %></div>
+        </div>
+      </div>
+      <div class="card-message preview_msg"><%= @card.message %></div>
     </div>
   </div>
 </div>
-
-<div class="sign_off"><%= @card.sign_off %></div>
