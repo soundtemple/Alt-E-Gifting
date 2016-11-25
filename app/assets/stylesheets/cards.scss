@@ -33,11 +33,6 @@
   height: 450px;
 }
 
-.card-text {
-  position: absolute;
-  text-align: center;
-  font-size: 17px;
-}
 
 .card-title {
     position: absolute;
@@ -45,10 +40,9 @@
     top: 70%;
     width: 100%;
     text-align: center;
-    font-size: 18px;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     color: white;
     text-shadow: 5px 5px black;
@@ -56,7 +50,7 @@
 
 .card-message {
   font-size: 2em;
-  font-family: 'Roboto Slab', serif;
+  font-family:roboto;
   position: absolute;
   text-align: center;
   font-size: 25px;
