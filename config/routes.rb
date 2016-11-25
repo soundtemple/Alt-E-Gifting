@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Start making a new card
   get '/cards', to: 'cards#new'
   post '/cards/create', to: 'cards#create'
-  get '/success', to: 'cards#success'
+  get '/success/:id', to: 'cards#success'
 
   # edit / update card
   get '/cards/:id/edit', to: 'cards#edit'

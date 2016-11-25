@@ -16,7 +16,7 @@ class CardsController < ApplicationController
     @card.sign_off = ""
     @card.message = Favour.first.message
     @card.background_img = ""
-    @card.background_col = "white"
+    @card.background_col = "#e1e8f0"
 
   end
 
@@ -36,7 +36,7 @@ class CardsController < ApplicationController
       if params[:save_choice].include?("Send")
         redirect_to "/cards/#{card.id}/send"
       else
-        redirect_to '/success'
+        redirect_to "/success/#{card.id}"
       end
     else
       redirect_to '/cards'
@@ -65,7 +65,7 @@ class CardsController < ApplicationController
       if params[:save_choice].include?("Send")
         redirect_to "/cards/#{@card.id}/send"
       else
-        redirect_to '/success'
+        redirect_to "/success/#{@card.id}"
       end
     else
       redirect_to '/cards'
@@ -90,7 +90,7 @@ class CardsController < ApplicationController
   end
 
   def success
-
+    @card = Card.find(params[:id])
     render :success
   end
 
