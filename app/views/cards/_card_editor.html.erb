@@ -18,7 +18,7 @@
       <% end %>
     </select>
 
-    <label for="category">Category</label>
+    <label for="category">THEME</label>
     <select class="category_select" name="category">
       <% @categories.each do |category| %>
         <% if category == @chosen_category %>
@@ -29,7 +29,7 @@
       <% end %>
     </select>
 
-    <label for="message">Favour</label>
+    <label for="message">FAVOUR</label>
     <select class="input_msg" name="message">
       <% Favour.all.each do |favour| %>
         <% if favour.category == @chosen_category && favour.message == @card.message %>
@@ -90,8 +90,8 @@
     <input name="sign_off"  placeholder="Signature" value="<%= @card.sign_off %>">
 
     <button class="prev">Back</button>
-    <input type="submit" name="action" value="Save">
-    <input type="submit" name="action" value="Save and Send">
+    <input type="submit" name="save_choice" value="Save">
+    <input type="submit" name="save_choice" value="Save and Send">
   </div>
 
 </div>

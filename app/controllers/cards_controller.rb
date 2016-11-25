@@ -16,7 +16,7 @@ class CardsController < ApplicationController
     @card.sign_off = ""
     @card.message = Favour.first.message
     @card.background_img = ""
-    @card.background_col = "#e1e8f0"
+    @card.background_col = "white"
 
   end
 
@@ -33,9 +33,11 @@ class CardsController < ApplicationController
 
 
     if card.save
-      if params[:action].include?("Send")
+      if params[:save_choice].include?("Send")
+        redirect_to "/cards/#{card.id}/send"
+      else
+        redirect_to '/success'
       end
-      redirect_to '/success'
     else
       redirect_to '/cards'
     end
@@ -60,9 +62,13 @@ class CardsController < ApplicationController
     @card.background_img = params[:background_img]
     @card.background_col = params[:background_col]
     if @card.save
-      redirect_to '/success'
+      if params[:save_choice].include?("Send")
+        redirect_to "/cards/#{@card.id}/send"
+      else
+        redirect_to '/success'
+      end
     else
-      render :new
+      redirect_to '/cards'
     end
   end
 

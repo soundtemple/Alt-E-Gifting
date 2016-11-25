@@ -20,10 +20,6 @@ img:hover {
   cursor: pointer;
 }
 
-.preview_img{
-  max-width: 650px;
-  overflow: hidden;
-}
 
 @font-face {
     font-family:bebas;
