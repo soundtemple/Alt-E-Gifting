@@ -14,9 +14,9 @@
 
 .background_col {
   width:700px;
-  max-width:700px;
-  height: 600px;
-  max-height:560px;
+  max-width:600px;
+  height: 500px;
+  max-height:500px;
   display: inline-block;
   position:relative;
 }
@@ -29,8 +29,8 @@
 }
 
 .preview_img{
-  width: 650px;
-  height: 450px;
+  width: 550px;
+  height: 380px;
 }
 
 
@@ -38,15 +38,14 @@
 .card-title {
     position: absolute;
     left: 0;
-    top: 70%;
+    top: 63%;
     width: 100%;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 4em;
     font-weight: bold;
     color: white;
-    text-shadow: 5px 5px black;
+    font-family: 'Francois One', sans-serif;
 }
 
 .card-message {
