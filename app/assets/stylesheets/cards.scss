@@ -38,21 +38,25 @@
 .card-title {
     position: absolute;
     left: 0;
-    top: 63%;
+    top: 50%;
     width: 100%;
     text-align: center;
     font-weight: 800;
-    font-size: 4em;
+    font-size: 4.2em;
     font-weight: bold;
     color: white;
     font-family: 'Francois One', sans-serif;
+    padding:10px;
+    line-height: 70px;
+    text-shadow: 3px 3px 0px #000000;
 }
 
 .card-message {
   font-size: 2em;
-  font-family:roboto;
+  font-family:arial;
   position: absolute;
   text-align: center;
   font-size: 25px;
   width:100%;
+  bottom:8%;
 }
