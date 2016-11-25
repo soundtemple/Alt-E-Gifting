@@ -71,7 +71,7 @@ kids.each do |num|
 end
 
 text = ['JUST BECAUSE', 'I LOVE YOU', 'THANK YOU', 'HAPPY BIRTHDAY', 'HAPPY MOTHERS DAY', 'HAPPY FATHERS DAY',
-  'MERRY CHRISTMAS', ,'FOR A DAY', 'FOR A WEEK', 'FOR A MONTH', 'FOR A YEAR', 'I OWE YOU', 'PAY BACK!', 'F*** YOU!']
+  'MERRY CHRISTMAS', 'FOR A DAY', 'FOR A WEEK', 'FOR A MONTH', 'FOR A YEAR', 'I OWE YOU', 'PAY BACK!', 'F*** YOU!']
 
 text.each do |num|
   Title.create(name: "#{num}")
