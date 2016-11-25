@@ -11,9 +11,9 @@
     <select class="input_t" name="title">
       <% Title.all.each do |title| %>
         <% if title.id == @card.title_id %>
-          <option selected value="<%= title.id %>"> <%= title.name %></option>
+          <option selected value="<%= title.id %>"> <%= title.name.split(" ").map(&:capitalize).join(" ") %></option>
         <%else%>
-          <option value="<%= title.id %>"> <%= title.name %></option>
+          <option value="<%= title.id %>"> <%= title.name.split(" ").map(&:capitalize).join(" ") %></option>
         <% end %>
       <% end %>
     </select>
@@ -22,9 +22,9 @@
     <select class="category_select" name="category">
       <% @categories.each do |category| %>
         <% if category == @chosen_category %>
-          <option selected value="<%= category %>"> <%= category %></option>
+          <option selected value="<%= category %>"> <%= category.split(" ").map(&:capitalize).join(" ") %></option>
         <% else %>
-          <option value="<%= category %>"> <%= category %></option>
+          <option value="<%= category %>"> <%= category.split(" ").map(&:capitalize).join(" ") %></option>
         <% end %>
       <% end %>
     </select>
