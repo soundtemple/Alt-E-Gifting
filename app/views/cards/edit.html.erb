@@ -1,4 +1,3 @@
-<h1>EDIT CARD</h1>
 <form action="/cards/<%=@card.id%>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="patch">
