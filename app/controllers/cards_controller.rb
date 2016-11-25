@@ -36,7 +36,7 @@ class CardsController < ApplicationController
       if params[:save_choice].include?("Send")
         redirect_to "/cards/#{card.id}/send"
       else
-        redirect_to '/success'
+        redirect_to "/success/#{card.id}"
       end
     else
       redirect_to '/cards'
@@ -65,7 +65,7 @@ class CardsController < ApplicationController
       if params[:save_choice].include?("Send")
         redirect_to "/cards/#{@card.id}/send"
       else
-        redirect_to '/success'
+        redirect_to "/success/#{@card.id}"
       end
     else
       redirect_to '/cards'
@@ -90,7 +90,7 @@ class CardsController < ApplicationController
   end
 
   def success
-
+    @card = Card.find(params[:id])
     render :success
   end
 
