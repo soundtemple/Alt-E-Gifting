@@ -104,9 +104,7 @@
       <div class="background_img">
         <img height="400" width="600" class="preview_img" src="<%= @card.background_img %>"/>
         <input type="hidden" class="preview_img_name" name="background_img" value="<%= @card.background_img %>">
-        <div class="card-text">
           <div class="card-title preview_t"><%= (Title.find(@card.title_id)).name %></div>
-        </div>
       </div>
       <div class="card-message preview_msg"><%= @card.message %></div>
     </div>
