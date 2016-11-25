@@ -5,7 +5,7 @@ body{
 
 .headings{
   text-align: left;
-  color:black;
+  color:#424242;
   margin-bottom: 5px;
   font-size: 30px;
   font-weight: 400;
@@ -64,7 +64,7 @@ form:hover .hover_text_card {
 }
 
 .logo{
-  width:350px;
+  width:300px;
   padding:5px;
   margin:0 auto;
 }
@@ -104,7 +104,41 @@ form:hover .hover_text_card {
   margin:5%;
 }
 
-// NEW CARD ENTRY - STYLE FOR EACH DIV
+.btn_wrapper{
+
+}
+
+.send_btn, .save_send_btn{
+  font-family: roboto;
+  text-transform: uppercase;
+  outline: 0;
+  border:0;
+  padding: 12px;
+  font-size: 17px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 4px;
+  color:white;
+  letter-spacing: .15em;
+  background-color: black;
+  margin-top: 20px;
+  background-color: #66ab69;
+  border-bottom: 3px solid green;
+  display:inline-block;
+  float:right;
+  margin-left: 3px;
+}
+
+.send_btn:hover, .save_send_btn:hover{
+  background-color: #339933;
+}
+
+.save_send_btn{
+  width: 150px;
+}
+
+/// NEW CARD ENTRY - STYLE FOR EACH DIV
 
 .box{
   max-width:750px;
@@ -112,24 +146,13 @@ form:hover .hover_text_card {
   height:100%;
 }
 
-.prev{
-
-}
-
-.next{
-
-}
-
-
-
-
-.box input:not(#color_picker):not(#search_input), .box select, .box textarea {
+.box input:not(#color_picker):not(#search_input):not(.send_btn):not(.save_send_btn), .box select, .box textarea {
   font-family: roboto;
   outline: 0;
   background: white;
   width: 100%;
   border: 0;
-  margin: 20px 0 15px;
+  margin: 0px 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 18px;
@@ -145,11 +168,13 @@ form:hover .hover_text_card {
   letter-spacing: .03em;
   margin-bottom: 8px;
   font-size: 28px;
+  margin-top: 15px;
+  color:#424242;
 }
 
 .prev, .next{
-  margin-top: 25px;
-  background: #D96358;
+  margin-top: 20px;
+  background: #ea4859;
 }
 
 .search_btn{
@@ -161,7 +186,7 @@ form:hover .hover_text_card {
   font-family: roboto;
   text-transform: uppercase;
   outline: 0;
-
+  border:0;
   width: 100px;
   padding: 12px;
   font-size: 17px;
@@ -170,21 +195,22 @@ form:hover .hover_text_card {
   cursor: pointer;
   border-radius: 4px;
   color:white;
+  letter-spacing: .15em;
 }
 
 .prev{
   float:left;
-  border-bottom: 3px solid #e60000;
+  border-bottom: 3px solid #b71526;
 }
 
 .next{
   float:right;
-  border-bottom: 3px solid #e60000;
+  border-bottom: 3px solid #b71526;
 }
 
 
-.next:hover, .prev:hover, .search_btn:hover{
-  background-color: #e38a82;
+.next:hover, .prev:hover{
+  background-color: #e62739;
 }
 
 ////TO AND FROM INPUTS
@@ -197,7 +223,7 @@ form:hover .hover_text_card {
 
 .search_wrapper{
   width:100%;
-  margin-bottom: 120px;
+  margin-bottom: 20 px;
 }
 
 #search_input{
@@ -218,15 +244,20 @@ form:hover .hover_text_card {
 .search_btn{
   float:right;
   width:25%;
-  padding:14px;
+  padding:15px;
   font-size: 15px;
+  border-bottom: 3px solid #ffeb3b;
 }
 
+.search_btn:hover{
+  background-color: #fdba44;
+}
 
 ///////BACKGROUND COLOR
 
 .input_col{
   height:350px;
+  width:100%;
 }
 
 
