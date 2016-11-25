@@ -256,6 +256,14 @@ form:hover .hover_text_card {
   color: #ea4859;
 }
 
+.container {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
+}
+
 .search_btn{
   float:right;
   width: 100px;
