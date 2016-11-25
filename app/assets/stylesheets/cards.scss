@@ -15,34 +15,27 @@
 .background_col {
   width:700px;
   max-width:700px;
-  height: 500px;
-  max-height:500px;
+  height: 600px;
+  max-height:560px;
   display: inline-block;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
+  position:relative;
 }
-
 
 .background_img {
   position: relative;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-top:3%;
+  margin:3% 3% 3.5%;
+}
+
+.preview_img{
+  width: 650px;
+  height: 450px;
 }
 
 .card-text {
   position: absolute;
-  top: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  top: 300px;
+  left:55px;
+  font-size: 17px;
 }
 
 .card-title {
@@ -50,10 +43,17 @@
   font-weight: bold;
   color: white;
   text-shadow: 5px 5px black;
-  font-family: bebas;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  text-align: center;
+
 }
 
 .card-message {
   font-size: 2em;
-  font-family: bodoni;
+  font-family: 'Roboto Slab', serif;;
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  width:100%;
 }

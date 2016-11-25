@@ -72,7 +72,6 @@
 }
 
 .session-buttons {
-  position: absolute;
   bottom: 0;
 }
 
@@ -85,22 +84,100 @@
 
 }
 
-.session-buttons button {
+.session-buttons {
   display: inline-block;
-  width: 150px;
-  height: 50px;
-  border: none;
-  color: white;
-  background-color: #47c1c2;
-  margin: 5%;
-  font-size: 1.2em;
-  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  font-family: roboto;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  outline: 0;
+  border: 0;
+  padding: 15px;
+  margin-left: 5px;
+  margin-right: 6px;
+  font-size: 22px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 4px;
+  color:white;
+}
+
+#session-delete-btn {
+  background-color: #D96358;
+  border-bottom: 3px solid #e60000;
+  font-size: 12px;
+  letter-spacing: .15em;
+  padding: 12px;
+}
+
+#session-edit-btn {
+  background-color: #FFCC33;
+  border-bottom: 3px solid #ffeb3b;
+  font-size: 12px;
+  letter-spacing: .15em;
+  padding: 12px;
+}
+
+#session-send-btn {
+  background-color: #66ab69;
+  border-bottom: 3px solid #4caf50;
+  font-size: 12px;
+  letter-spacing: .15em;
+  padding: 12px;
+}
+
+
+#session-delete-btn:hover {
+  background-color: #e38a82;
+  cursor: pointer;
+}
+
+#session-edit-btn:hover {
+  background-color: #f1da96;
+  cursor: pointer;
+}
+
+#session-send-btn:hover {
+  background-color: #a9e6ac;
+  cursor: pointer;
+}
+
+#session-user-btn {
+  background-color: #d0e5e8;
+  width: 100%;
+  border-bottom: 3px solid #92d3d4;
+  font-size: 12px;
+  letter-spacing: .15em;
+  padding: 12px;
+}
+
+
+#session-user-btn:hover {
+  background-color: #bed1d1;
+  cursor: pointer;
+}
+
+
+
+
+#login-signup-btn {
+  background-color: #D96358;
+  border-bottom: 3px solid #e60000;
+  font-size: 17px;
+  width: 110px;
+  margin-top: 20px;
+  letter-spacing: .15em;
+  padding: 12px;
+}
+
+#login-signup-btn:hover {
+  background-color: #e38a82;
+  cursor: pointer;
 
 }
 
-.session-buttons button:hover {
-  background-color: #7ededf;
-}
 
 .session-buttons button a {
   text-decoration: none;
