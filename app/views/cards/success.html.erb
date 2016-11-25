@@ -2,12 +2,30 @@
 <html>
   <head>
     <title>SUCCESS</title>
+    <style>
+      #another_card:hover {
+        color: #ea4859;
+      }
+    </style>
   </head>
   <body>
-    <h1>SUCCESS</h1>
+    <div class="show-page-wrapper"  style="margin:10px 0 20px 0">
+      <div class="show-page-preview">
+        <div  class="background_col preview_col" style="background-color:<%= @card.background_col %>">
+          <div class="background_img">
+            <img height="400" width="600" class="preview_img" src="<%= @card.background_img %>"/>
+            <input type="hidden" class="preview_img_name" name="background_img" value="<%= @card.background_img %>">
+            <div class="card-text">
+              <div class="card-title preview_t"><%= (Title.find(@card.title_id)).name %></div>
+            </div>
+          </div>
+          <div class="card-message preview_msg"><%= @card.message %></div>
+        </div>
+      </div>
+    </div>
 
-    <p>
-      Card created.  <a href="/cards">Make another?</a>
+    <p style="text-align:center; margin:20px; font-size:2em;">
+      Card Successfully Created. <a id="another_card"href="/cards">Make Another?</a>
     </p>
 
   </body>
