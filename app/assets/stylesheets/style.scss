@@ -276,12 +276,26 @@ form:hover .hover_text_card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .home-pages-images img {
-  width: 40%;
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
   height: 40%;
-  margin: 5%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.home-page-text {
+  margin-bottom: 30px;
+}
+
+.home-page-text h3 {
+  margin: 1%;
 }
 
 .search_btn{
@@ -313,4 +327,43 @@ form:hover .hover_text_card {
 
 #m_user:hover, #m_create:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+
+// RESPONSIVE DESIGN
+
+@media only screen and (max-width: 550px) {
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logo-cont {
+    width: 500px;
+  }
+
+  .logo-cont img{
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .nav .menu-icon-acc {
+    order: 2;
+  }
+
+  .nav .menu-icon-card {
+    order: 3;
+  }
+
+  .home-pages-images {
+    width: 100%;
+  }
+
+  .home-pages-images img  {
+    // min-width: 300px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
 }

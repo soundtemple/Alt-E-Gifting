@@ -26,6 +26,12 @@
   color:#707070;
 }
 
+.saved-recipient {
+  text-align: left;
+  width: 33%;
+  padding-left: 50px;
+}
+
 .saved-card-list {
   display: flex;
   flex-direction: column;
@@ -58,6 +64,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.saved-title,
+.cards-recipient,
+.cards-title {
+  width: 33%;
+  text-align: left;
 }
 
 .session-btn-options {
@@ -241,4 +254,25 @@ h3{
   color:#424242;
   font-family: roboto;
   letter-spacing: .07em;
+}
+
+
+@media only screen and (max-width: 750px) {
+  .session-btn-options {
+    flex-direction: column;
+  }
+
+  .session-buttons {
+    margin-bottom:5px;
+  }
+
+  .saved-recipient {
+    padding-left: 0;
+  }
+
+  .session-wrapper {
+    flex-direction: column;
+  }
+
+
 }
