@@ -17,4 +17,4 @@
 .byebug_history
 
 # ignore secrets
-/config/secrets.yml
+/yml/*
